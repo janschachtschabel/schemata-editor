@@ -306,8 +306,6 @@ export const useSchemaStore = create<SchemaStoreState & SchemaStoreActions>((set
     
     // Copy all schemas from the base version
     const schemas = new Map(get().schemas);
-    const registry = get().contextRegistry;
-    const contextPath = registry?.contexts[contextName]?.path || contextName;
     
     baseSchemas.forEach(schemaFile => {
       const baseCacheKey = `${contextName}@${baseVersion}/${schemaFile}`;
@@ -349,7 +347,7 @@ export const useSchemaStore = create<SchemaStoreState & SchemaStoreActions>((set
   // Schema Management
   // -------------------------------------------------------------------------
 
-  createSchema: (schemaFile: string, profileId: string, displayName: string) => {
+  createSchema: (schemaFile: string, profileId: string, _displayName: string) => {
     const { activeContext, activeVersion } = get();
     const cacheKey = `${activeContext}@${activeVersion}/${schemaFile}`;
     

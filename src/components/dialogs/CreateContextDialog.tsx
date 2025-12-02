@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useSchemaStore, useAvailableSchemas } from '../../store/schema-store';
+import { useSchemaStore } from '../../store/schema-store';
 import { X } from 'lucide-react';
 
 interface CreateContextDialogProps {

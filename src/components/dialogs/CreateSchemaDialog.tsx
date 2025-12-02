@@ -7,7 +7,7 @@ interface CreateSchemaDialogProps {
 }
 
 export function CreateSchemaDialog({ onClose }: CreateSchemaDialogProps) {
-  const { activeContext, createSchema, getContentTypes, addContentType } = useSchemaStore();
+  const { activeContext, createSchema, addContentType } = useSchemaStore();
   
   const [schemaFile, setSchemaFile] = useState('');
   const [profileId, setProfileId] = useState('type:');
