@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  schemata-editor:
+    build: .
+    container_name: schemata-editor
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    # Optional: Mount external schemata folder
+    # volumes:
+    #   - ./my-schemata:/usr/share/nginx/html/schemata
