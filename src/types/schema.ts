@@ -198,6 +198,8 @@ export interface SchemaField {
 export interface SchemaGroup {
   /** Unique group identifier */
   id: string;
+  /** Material Icon name (e.g. 'description', 'school', 'event') */
+  icon?: string;
   /** Display label */
   label: LocalizedString | string;
   /** Description */

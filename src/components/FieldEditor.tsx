@@ -22,6 +22,7 @@ import {
 } from 'lucide-react';
 import { cn } from '../utils/cn';
 import { VocabularyEditor } from './VocabularyEditor';
+import { SubFieldsEditor } from './SubFieldsEditor';
 
 // Tooltip texts for all options
 const TOOLTIPS = {
@@ -64,7 +65,7 @@ export function FieldEditor() {
   const field = useActiveField();
   const containerRef = useRef<HTMLDivElement>(null);
   
-  const [activeTab, setActiveTab] = useState<'basic' | 'system' | 'vocabulary'>('basic');
+  const [activeTab, setActiveTab] = useState<'basic' | 'system' | 'vocabulary' | 'subfields'>('basic');
   
   // Local state buffer for editing
   const [localField, setLocalField] = useState<SchemaField | null>(null);
@@ -192,6 +193,7 @@ export function FieldEditor() {
           { id: 'basic', label: 'Basis', icon: <FileText className="h-4 w-4" /> },
           { id: 'system', label: 'System', icon: <Settings2 className="h-4 w-4" /> },
           { id: 'vocabulary', label: 'Vokabular', icon: <BookOpen className="h-4 w-4" /> },
+          { id: 'subfields', label: 'Unterfelder', icon: <Settings2 className="h-4 w-4" /> },
         ].map(tab => (
           <button
             key={tab.id}
@@ -234,6 +236,15 @@ export function FieldEditor() {
             vocabulary={localField.system.vocabulary}
             onUpdate={(vocab) => {
               handleSystemUpdate({ vocabulary: vocab });
+            }}
+          />
+        )}
+
+        {activeTab === 'subfields' && (
+          <SubFieldsEditor
+            items={localField.system.items}
+            onUpdate={(newItems) => {
+              handleSystemUpdate({ items: newItems });
             }}
           />
         )}

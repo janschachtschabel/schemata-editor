@@ -17,6 +17,11 @@
         "didactic_planning_tools.json",
         "source.json",
         "prompt.json"
+      ],
+      "deactivated": [
+        "education_program.json",
+        "course.json",
+        "curriculum.json"
       ]
     }
   }

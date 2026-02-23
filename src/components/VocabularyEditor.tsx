@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import type { Vocabulary, VocabularyConcept, LocalizedString } from '../types/schema';
 import { 
   Plus, 
@@ -9,7 +9,8 @@ import {
   Tag,
   Globe,
   ChevronDown,
-  ChevronRight
+  ChevronRight,
+  GitBranch
 } from 'lucide-react';
 
 interface VocabularyEditorProps {
@@ -21,6 +22,7 @@ export function VocabularyEditor({ vocabulary, onUpdate }: VocabularyEditorProps
   const [expandedConcepts, setExpandedConcepts] = useState<Set<number>>(new Set());
   const [skohubUrl, setSkohubUrl] = useState('');
   const [isImporting, setIsImporting] = useState(false);
+  const [viewMode, setViewMode] = useState<'flat' | 'tree'>('flat');
 
   // No vocabulary configured
   if (!vocabulary) {
@@ -98,6 +100,186 @@ export function VocabularyEditor({ vocabulary, onUpdate }: VocabularyEditorProps
     return { ...base, [lang]: newValue };
   };
 
+  // Check if any concepts have broader (hierarchical)
+  const hasBroaderConcepts = vocabulary.concepts.some(c => c.broader);
+
+  // Build parent-child map for tree view
+  const getChildConcepts = (concepts: VocabularyConcept[], parentUri: string | undefined): { concept: VocabularyConcept; index: number }[] => {
+    return concepts
+      .map((c, i) => ({ concept: c, index: i }))
+      .filter(({ concept }) => {
+        if (parentUri === undefined) {
+          // Root level: concepts without broader, or whose broader doesn't exist in the list
+          return !concept.broader || !concepts.some(c => c.uri === concept.broader);
+        }
+        return concept.broader === parentUri;
+      });
+  };
+
+  // Render a single concept row (used in both flat and tree mode)
+  const renderConceptRow = (concept: VocabularyConcept, index: number, depth: number) => {
+    const isExpanded = expandedConcepts.has(index);
+    
+    return (
+      <div key={index} className="border rounded-lg bg-card" style={{ marginLeft: depth * 16 }}>
+        {/* Concept Header */}
+        <div
+          className="flex items-center gap-2 px-3 py-2 cursor-pointer hover:bg-accent/50 group"
+          onClick={() => toggleConcept(index)}
+        >
+          {isExpanded ? (
+            <ChevronDown className="h-4 w-4 text-muted-foreground" />
+          ) : (
+            <ChevronRight className="h-4 w-4 text-muted-foreground" />
+          )}
+          {concept.icon ? (
+            <span className="material-icons text-primary text-sm">{concept.icon}</span>
+          ) : (
+            <Tag className="h-4 w-4 text-primary" />
+          )}
+          <span className="flex-1 truncate text-sm">
+            {getLocalizedValue(concept.label, 'de') || 'Unbenannt'}
+          </span>
+          {concept.broader && (
+            <span title={`broader: ${concept.broader}`}>
+              <GitBranch className="h-3 w-3 text-muted-foreground" />
+            </span>
+          )}
+          {concept.uri && (
+            <Link className="h-3 w-3 text-muted-foreground" />
+          )}
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              if (confirm('Konzept wirklich löschen?')) {
+                deleteConcept(index);
+              }
+            }}
+            className="p-1 hover:bg-destructive/20 rounded opacity-0 group-hover:opacity-100"
+          >
+            <Trash2 className="h-3 w-3 text-destructive" />
+          </button>
+        </div>
+
+        {/* Concept Details */}
+        {isExpanded && (
+          <div className="px-3 pb-3 pt-1 border-t space-y-3">
+            {/* Labels */}
+            <div className="grid grid-cols-2 gap-2">
+              <div>
+                <label className="text-xs text-muted-foreground">🇩🇪 Label</label>
+                <input
+                  type="text"
+                  value={getLocalizedValue(concept.label, 'de')}
+                  onChange={(e) => updateConcept(index, {
+                    label: setLocalizedValue(concept.label, 'de', e.target.value)
+                  })}
+                  className="w-full px-2 py-1 border rounded text-sm bg-background"
+                />
+              </div>
+              <div>
+                <label className="text-xs text-muted-foreground">🇬🇧 Label</label>
+                <input
+                  type="text"
+                  value={getLocalizedValue(concept.label, 'en')}
+                  onChange={(e) => updateConcept(index, {
+                    label: setLocalizedValue(concept.label, 'en', e.target.value)
+                  })}
+                  className="w-full px-2 py-1 border rounded text-sm bg-background"
+                />
+              </div>
+            </div>
+
+            {/* URI */}
+            <div>
+              <label className="text-xs text-muted-foreground">URI</label>
+              <input
+                type="text"
+                value={concept.uri || ''}
+                onChange={(e) => updateConcept(index, { uri: e.target.value })}
+                className="w-full px-2 py-1 border rounded text-sm font-mono bg-background"
+                placeholder="http://..."
+              />
+            </div>
+
+            {/* Broader (parent concept URI) */}
+            <div>
+              <label className="text-xs text-muted-foreground flex items-center gap-1">
+                <GitBranch className="h-3 w-3" />
+                Broader (Übergeordnetes Konzept URI)
+              </label>
+              <input
+                type="text"
+                value={concept.broader || ''}
+                onChange={(e) => updateConcept(index, { broader: e.target.value || undefined })}
+                className="w-full px-2 py-1 border rounded text-sm font-mono bg-background"
+                placeholder="http://... (URI des Eltern-Konzepts)"
+              />
+              {concept.broader && (
+                <p className="text-xs text-muted-foreground mt-0.5">
+                  ↑ {vocabulary.concepts.find(c => c.uri === concept.broader)
+                    ? getLocalizedValue(vocabulary.concepts.find(c => c.uri === concept.broader)!.label, 'de')
+                    : 'Externes Konzept'}
+                </p>
+              )}
+            </div>
+
+            {/* Value (if different from label) */}
+            <div>
+              <label className="text-xs text-muted-foreground">Value (optional, falls abweichend)</label>
+              <input
+                type="text"
+                value={concept.value || ''}
+                onChange={(e) => updateConcept(index, { value: e.target.value || undefined })}
+                className="w-full px-2 py-1 border rounded text-sm bg-background"
+              />
+            </div>
+
+            {/* Icon */}
+            <div>
+              <label className="text-xs text-muted-foreground">Icon (Material Icons Name)</label>
+              <div className="flex items-center gap-2">
+                <input
+                  type="text"
+                  value={concept.icon || ''}
+                  onChange={(e) => updateConcept(index, { icon: e.target.value || undefined })}
+                  className="flex-1 px-2 py-1 border rounded text-sm bg-background"
+                  placeholder="event, person, school..."
+                />
+                {concept.icon && (
+                  <span className="material-icons text-base text-primary">{concept.icon}</span>
+                )}
+              </div>
+            </div>
+
+            {/* Schema File (for content types) */}
+            <div>
+              <label className="text-xs text-muted-foreground">Schema-Datei (für Inhaltsarten)</label>
+              <input
+                type="text"
+                value={concept.schema_file || ''}
+                onChange={(e) => updateConcept(index, { schema_file: e.target.value || undefined })}
+                className="w-full px-2 py-1 border rounded text-sm font-mono bg-background"
+                placeholder="event.json"
+              />
+            </div>
+          </div>
+        )}
+      </div>
+    );
+  };
+
+  // Render tree concepts recursively
+  const renderTreeConcepts = (concepts: VocabularyConcept[], parentUri: string | undefined, depth: number): React.ReactNode => {
+    const children = getChildConcepts(concepts, parentUri);
+    return children.map(({ concept, index }) => (
+      <div key={index}>
+        {renderConceptRow(concept, index, depth)}
+        {concept.uri && renderTreeConcepts(concepts, concept.uri, depth + 1)}
+      </div>
+    ));
+  };
+
   // Import from SKOHUB
   const importFromSkohub = async () => {
     if (!skohubUrl) return;
@@ -147,6 +329,7 @@ export function VocabularyEditor({ vocabulary, onUpdate }: VocabularyEditorProps
               en: item.prefLabel?.en || '',
             },
             uri: item.id || '',
+            broader: item.broader?.id || item.broader || undefined,
             altLabels,
             description: item.definition ? {
               de: item.definition?.de || '',
@@ -165,6 +348,7 @@ export function VocabularyEditor({ vocabulary, onUpdate }: VocabularyEditorProps
               en: item.prefLabel?.en || item['skos:prefLabel']?.['@value'] || item['@id'],
             },
             uri: item['@id'] || item.id,
+            broader: item['skos:broader']?.['@id'] || item.broader?.id || item.broader || undefined,
             description: item.definition ? {
               de: item.definition?.de || '',
               en: item.definition?.en || '',
@@ -179,6 +363,7 @@ export function VocabularyEditor({ vocabulary, onUpdate }: VocabularyEditorProps
             en: item.prefLabel?.en || item.label?.en || item.label || '',
           },
           uri: item.uri || item.id || item['@id'] || '',
+          broader: item.broader || undefined,
         }));
       }
       
@@ -192,11 +377,15 @@ export function VocabularyEditor({ vocabulary, onUpdate }: VocabularyEditorProps
         ? confirm(`${concepts.length} Konzepte gefunden.\n\nOK = Bestehende ersetzen\nAbbrechen = Zu bestehenden hinzufügen`)
         : true;
       
+      // Auto-detect hierarchical if broader fields exist
+      const isHierarchical = concepts.some(c => c.broader);
+      
       // Update vocabulary
       onUpdate({
         ...vocabulary,
         type: 'skos',
         scheme: schemeUri,
+        hierarchical: isHierarchical || vocabulary.hierarchical,
         concepts: replace ? concepts : [...vocabulary.concepts, ...concepts],
       });
       
@@ -362,136 +551,38 @@ export function VocabularyEditor({ vocabulary, onUpdate }: VocabularyEditorProps
       <div>
         <div className="flex items-center justify-between mb-2">
           <h4 className="text-sm font-medium">Konzepte ({vocabulary.concepts.length})</h4>
-          <button
-            onClick={addConcept}
-            className="flex items-center gap-1 px-2 py-1 text-xs bg-primary text-primary-foreground rounded hover:bg-primary/90"
-          >
-            <Plus className="h-3 w-3" />
-            Hinzufügen
-          </button>
+          <div className="flex items-center gap-1">
+            {hasBroaderConcepts && (
+              <button
+                onClick={() => setViewMode(viewMode === 'flat' ? 'tree' : 'flat')}
+                className={`flex items-center gap-1 px-2 py-1 text-xs border rounded hover:bg-accent ${viewMode === 'tree' ? 'bg-primary/10 border-primary text-primary' : ''}`}
+                title="Hierarchische Ansicht"
+              >
+                <GitBranch className="h-3 w-3" />
+                {viewMode === 'tree' ? 'Baum' : 'Flach'}
+              </button>
+            )}
+            <button
+              onClick={addConcept}
+              className="flex items-center gap-1 px-2 py-1 text-xs bg-primary text-primary-foreground rounded hover:bg-primary/90"
+            >
+              <Plus className="h-3 w-3" />
+              Hinzufügen
+            </button>
+          </div>
         </div>
 
         {vocabulary.concepts.length === 0 ? (
           <div className="text-center p-4 border rounded-lg text-sm text-muted-foreground">
             Keine Konzepte definiert
           </div>
+        ) : viewMode === 'tree' && hasBroaderConcepts ? (
+          <div className="space-y-1 max-h-[400px] overflow-auto">
+            {renderTreeConcepts(vocabulary.concepts, undefined, 0)}
+          </div>
         ) : (
           <div className="space-y-1 max-h-[400px] overflow-auto">
-            {vocabulary.concepts.map((concept, index) => {
-              const isExpanded = expandedConcepts.has(index);
-              
-              return (
-                <div key={index} className="border rounded-lg bg-card">
-                  {/* Concept Header */}
-                  <div
-                    className="flex items-center gap-2 px-3 py-2 cursor-pointer hover:bg-accent/50"
-                    onClick={() => toggleConcept(index)}
-                  >
-                    {isExpanded ? (
-                      <ChevronDown className="h-4 w-4 text-muted-foreground" />
-                    ) : (
-                      <ChevronRight className="h-4 w-4 text-muted-foreground" />
-                    )}
-                    <Tag className="h-4 w-4 text-primary" />
-                    <span className="flex-1 truncate text-sm">
-                      {getLocalizedValue(concept.label, 'de') || 'Unbenannt'}
-                    </span>
-                    {concept.uri && (
-                      <Link className="h-3 w-3 text-muted-foreground" />
-                    )}
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        if (confirm('Konzept wirklich löschen?')) {
-                          deleteConcept(index);
-                        }
-                      }}
-                      className="p-1 hover:bg-destructive/20 rounded opacity-0 group-hover:opacity-100"
-                    >
-                      <Trash2 className="h-3 w-3 text-destructive" />
-                    </button>
-                  </div>
-
-                  {/* Concept Details */}
-                  {isExpanded && (
-                    <div className="px-3 pb-3 pt-1 border-t space-y-3">
-                      {/* Labels */}
-                      <div className="grid grid-cols-2 gap-2">
-                        <div>
-                          <label className="text-xs text-muted-foreground">🇩🇪 Label</label>
-                          <input
-                            type="text"
-                            value={getLocalizedValue(concept.label, 'de')}
-                            onChange={(e) => updateConcept(index, {
-                              label: setLocalizedValue(concept.label, 'de', e.target.value)
-                            })}
-                            className="w-full px-2 py-1 border rounded text-sm bg-background"
-                          />
-                        </div>
-                        <div>
-                          <label className="text-xs text-muted-foreground">🇬🇧 Label</label>
-                          <input
-                            type="text"
-                            value={getLocalizedValue(concept.label, 'en')}
-                            onChange={(e) => updateConcept(index, {
-                              label: setLocalizedValue(concept.label, 'en', e.target.value)
-                            })}
-                            className="w-full px-2 py-1 border rounded text-sm bg-background"
-                          />
-                        </div>
-                      </div>
-
-                      {/* URI */}
-                      <div>
-                        <label className="text-xs text-muted-foreground">URI</label>
-                        <input
-                          type="text"
-                          value={concept.uri || ''}
-                          onChange={(e) => updateConcept(index, { uri: e.target.value })}
-                          className="w-full px-2 py-1 border rounded text-sm font-mono bg-background"
-                          placeholder="http://..."
-                        />
-                      </div>
-
-                      {/* Value (if different from label) */}
-                      <div>
-                        <label className="text-xs text-muted-foreground">Value (optional, falls abweichend)</label>
-                        <input
-                          type="text"
-                          value={concept.value || ''}
-                          onChange={(e) => updateConcept(index, { value: e.target.value || undefined })}
-                          className="w-full px-2 py-1 border rounded text-sm bg-background"
-                        />
-                      </div>
-
-                      {/* Icon */}
-                      <div>
-                        <label className="text-xs text-muted-foreground">Icon (Material Icons Name)</label>
-                        <input
-                          type="text"
-                          value={concept.icon || ''}
-                          onChange={(e) => updateConcept(index, { icon: e.target.value || undefined })}
-                          className="w-full px-2 py-1 border rounded text-sm bg-background"
-                          placeholder="event, person, school..."
-                        />
-                      </div>
-
-                      {/* Schema File (for content types) */}
-                      <div>
-                        <label className="text-xs text-muted-foreground">Schema-Datei (für Inhaltsarten)</label>
-                        <input
-                          type="text"
-                          value={concept.schema_file || ''}
-                          onChange={(e) => updateConcept(index, { schema_file: e.target.value || undefined })}
-                          className="w-full px-2 py-1 border rounded text-sm font-mono bg-background"
-                          placeholder="event.json"
-                        />
-                      </div>
-                    </div>
-                  )}
-                </div>
-              );
-            })}
+            {vocabulary.concepts.map((concept, index) => renderConceptRow(concept, index, 0))}
           </div>
         )}
       </div>

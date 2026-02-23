@@ -32,6 +32,8 @@ export function SchemaEditor() {
   const [editingGroup, setEditingGroup] = useState<string | null>(null);
   const [showAddGroup, setShowAddGroup] = useState(false);
   const [newGroupName, setNewGroupName] = useState({ de: '', en: '' });
+  const [newGroupIcon, setNewGroupIcon] = useState('');
+  const [editingGroupIcon, setEditingGroupIcon] = useState<string | null>(null);
 
   // Handler for adding a new field
   const handleAddField = (groupId: string) => {
@@ -172,7 +174,11 @@ export function SchemaEditor() {
                 ) : (
                   <ChevronRight className="h-4 w-4 text-muted-foreground" />
                 )}
-                <Layers className="h-4 w-4 text-primary" />
+                {group.icon ? (
+                  <span className="material-icons text-primary text-base" title={`Icon: ${group.icon}`}>{group.icon}</span>
+                ) : (
+                  <Layers className="h-4 w-4 text-primary" />
+                )}
                 {editingGroup === group.id ? (
                   <input
                     type="text"
@@ -205,6 +211,16 @@ export function SchemaEditor() {
                 <button
                   onClick={(e) => {
                     e.stopPropagation();
+                    setEditingGroupIcon(group.id);
+                  }}
+                  className="p-1 hover:bg-accent rounded opacity-0 group-hover:opacity-100"
+                  title="Icon ändern"
+                >
+                  <span className="text-xs text-muted-foreground">🎨</span>
+                </button>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
                     setEditingGroup(group.id);
                   }}
                   className="p-1 hover:bg-accent rounded opacity-0 group-hover:opacity-100"
@@ -225,6 +241,34 @@ export function SchemaEditor() {
                   <Trash2 className="h-3 w-3 text-destructive" />
                 </button>
               </div>
+
+              {/* Icon Editor */}
+              {editingGroupIcon === group.id && (
+                <div className="px-4 py-2 border-t bg-muted/30 flex items-center gap-2">
+                  <span className="text-xs text-muted-foreground">Icon:</span>
+                  <input
+                    type="text"
+                    defaultValue={group.icon || ''}
+                    autoFocus
+                    placeholder="z.B. description, school, event..."
+                    className="flex-1 px-2 py-1 border rounded text-sm bg-background"
+                    onBlur={(e) => {
+                      updateGroup(activeSchemaFile!, group.id, { icon: e.target.value || undefined });
+                      setEditingGroupIcon(null);
+                    }}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') {
+                        updateGroup(activeSchemaFile!, group.id, { icon: (e.target as HTMLInputElement).value || undefined });
+                        setEditingGroupIcon(null);
+                      }
+                      if (e.key === 'Escape') setEditingGroupIcon(null);
+                    }}
+                  />
+                  {group.icon && (
+                    <span className="material-icons text-base text-primary">{group.icon}</span>
+                  )}
+                </div>
+              )}
 
               {/* Group Fields */}
               {isExpanded && (
@@ -271,38 +315,41 @@ export function SchemaEditor() {
         {showAddGroup ? (
           <div className="mb-4 border rounded-lg bg-card p-4">
             <div className="flex gap-2">
-              <input
-                type="text"
-                value={newGroupName.de}
-                onChange={(e) => setNewGroupName({ de: e.target.value, en: e.target.value })}
-                placeholder="Gruppenname..."
-                autoFocus
-                className="flex-1 px-3 py-2 border rounded-md text-sm bg-background"
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter' && newGroupName.de) {
-                    const groupId = newGroupName.de.toLowerCase().replace(/\s+/g, '_');
-                    addGroup(activeSchemaFile!, {
-                      id: groupId,
-                      label: { de: newGroupName.de, en: newGroupName.en || newGroupName.de }
-                    });
-                    setNewGroupName({ de: '', en: '' });
-                    setShowAddGroup(false);
-                  }
-                  if (e.key === 'Escape') {
-                    setShowAddGroup(false);
-                    setNewGroupName({ de: '', en: '' });
-                  }
-                }}
-              />
+              <div className="flex-1 space-y-2">
+                <input
+                  type="text"
+                  value={newGroupName.de}
+                  onChange={(e) => setNewGroupName({ de: e.target.value, en: e.target.value })}
+                  placeholder="Gruppenname..."
+                  autoFocus
+                  className="w-full px-3 py-2 border rounded-md text-sm bg-background"
+                  onKeyDown={(e) => {
+                    if (e.key === 'Escape') {
+                      setShowAddGroup(false);
+                      setNewGroupName({ de: '', en: '' });
+                      setNewGroupIcon('');
+                    }
+                  }}
+                />
+                <input
+                  type="text"
+                  value={newGroupIcon}
+                  onChange={(e) => setNewGroupIcon(e.target.value)}
+                  placeholder="Icon (z.B. description, school, event...)"
+                  className="w-full px-3 py-2 border rounded-md text-sm bg-background"
+                />
+              </div>
               <button
                 onClick={() => {
                   if (newGroupName.de) {
                     const groupId = newGroupName.de.toLowerCase().replace(/\s+/g, '_');
                     addGroup(activeSchemaFile!, {
                       id: groupId,
+                      icon: newGroupIcon || undefined,
                       label: { de: newGroupName.de, en: newGroupName.en || newGroupName.de }
                     });
                     setNewGroupName({ de: '', en: '' });
+                    setNewGroupIcon('');
                     setShowAddGroup(false);
                   }
                 }}
@@ -315,6 +362,7 @@ export function SchemaEditor() {
                 onClick={() => {
                   setShowAddGroup(false);
                   setNewGroupName({ de: '', en: '' });
+                  setNewGroupIcon('');
                 }}
                 className="px-3 py-2 border rounded-md text-sm hover:bg-accent"
               >
@@ -433,6 +481,11 @@ function FieldRow({ field, isActive, onClick, onDelete }: FieldRowProps) {
         {field.system.multiple && (
           <span className="text-xs px-1.5 py-0.5 rounded bg-slate-100 text-slate-700">
             multi
+          </span>
+        )}
+        {field.system.items?.variants && field.system.items.variants.length > 0 && (
+          <span className="text-xs px-1.5 py-0.5 rounded bg-orange-100 text-orange-700">
+            {field.system.items.variants.length} var.
           </span>
         )}
       </div>
