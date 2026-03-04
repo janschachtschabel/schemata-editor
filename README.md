@@ -56,7 +56,7 @@ cd schemata-editor
 # Dependencies installieren
 npm install
 
-# Schemata-Ordner kopieren (von metadata-agent-canvas-oeh)
+# Schemata-Ordner kopieren (von metadata-agent-api)
 npm run setup
 ```
 
@@ -95,7 +95,11 @@ public/schemata/
 ├── context-registry.json      # Alle Kontexte
 ├── default/                   # Standard-Kontext
 │   ├── manifest.json          # Versionen & Schema-Liste
-│   └── v1.8.0/
+│   ├── v1.8.0/
+│   │   ├── core.json
+│   │   ├── event.json
+│   │   └── ...
+│   └── v1.8.1/                # Aktuelle Version
 │       ├── core.json
 │       ├── event.json
 │       ├── education_offer.json
@@ -119,7 +123,7 @@ public/schemata/
     "default": {
       "name": "WLO/OEH Standard",
       "description": "Vollständiges Schema-Set",
-      "defaultVersion": "1.8.0",
+      "defaultVersion": "1.8.1",
       "path": "default"
     }
   },
@@ -134,8 +138,8 @@ public/schemata/
   "contextName": "default",
   "name": "WLO/OEH Standard",
   "versions": {
-    "1.8.0": {
-      "releaseDate": "2025-11-01",
+    "1.8.1": {
+      "releaseDate": "2026-02-23",
       "isDefault": true,
       "schemas": ["core.json", "event.json", "..."],
       "changelog": [
@@ -208,11 +212,13 @@ Falls CORS blockiert:
 ### ZIP-Struktur
 
 ```
-schemata-export-2025-12-02.zip
+schemata-export-2026-02-23.zip
 ├── context-registry.json
 ├── default/
 │   ├── manifest.json
-│   └── v1.8.0/
+│   ├── v1.8.0/
+│   │   └── ...
+│   └── v1.8.1/
 │       ├── core.json
 │       └── ...
 └── mds_oeh/

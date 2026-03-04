@@ -113,7 +113,7 @@ const initialState: SchemaStoreState = {
   contextManifests: new Map(),
   schemas: new Map(),
   activeContext: 'default',
-  activeVersion: '1.8.0',
+  activeVersion: '1.8.1',
   activeSchemaFile: null,
   activeFieldId: null,
   hasUnsavedChanges: false,
@@ -139,7 +139,10 @@ export const useSchemaStore = create<SchemaStoreState & SchemaStoreActions>((set
       const response = await fetch('/schemata/context-registry.json');
       if (!response.ok) throw new Error('Failed to load context registry');
       const registry = await response.json();
-      set({ contextRegistry: registry, isLoading: false });
+      // Resolve activeVersion from registry for current context
+      const currentContext = get().activeContext;
+      const defaultVersion = registry.contexts[currentContext]?.defaultVersion;
+      set({ contextRegistry: registry, isLoading: false, ...(defaultVersion ? { activeVersion: defaultVersion } : {}) });
       
       // Load manifests for all contexts
       for (const contextName of Object.keys(registry.contexts)) {

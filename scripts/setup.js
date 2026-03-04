@@ -9,7 +9,7 @@ import { fileURLToPath } from 'url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const rootDir = join(__dirname, '..');
 
-const sourcePath = join(rootDir, '..', 'metadata-agent-canvas-oeh', 'src', 'schemata');
+const sourcePath = join(rootDir, '..', 'metadata-agent-api', 'src', 'schemata');
 const targetPath = join(rootDir, 'public', 'schemata');
 
 console.log('📦 Schemata Setup');
@@ -19,7 +19,7 @@ console.log(`Target: ${targetPath}`);
 
 if (!existsSync(sourcePath)) {
   console.error('❌ Source folder not found!');
-  console.log('   Make sure metadata-agent-canvas-oeh exists.');
+  console.log('   Make sure metadata-agent-api exists as sibling directory.');
   process.exit(1);
 }
 

@@ -16,7 +16,7 @@ export function CreateContextDialog({ onClose }: CreateContextDialogProps) {
 
   // Get schemas from the base context
   const baseManifest = contextManifests.get(basedOn);
-  const baseVersion = contextRegistry?.contexts[basedOn]?.defaultVersion || '1.8.0';
+  const baseVersion = contextRegistry?.contexts[basedOn]?.defaultVersion || '1.8.1';
   const availableSchemas = baseManifest?.versions[baseVersion]?.schemas || [];
 
   const handleCreate = () => {
