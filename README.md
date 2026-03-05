@@ -107,9 +107,11 @@ public/schemata/
 │       ├── person.json
 │       ├── organization.json
 │       └── ...
-└── mds_oeh/                   # Weiterer Kontext
+└── mds_oeh/                   # OEH Metadatenset
     ├── manifest.json
-    └── v1.8.0/
+    ├── v1.8.0/
+    │   └── ...
+    └── v1.8.1/                # Aktuelle Version
         └── ...
 ```
 
@@ -125,6 +127,13 @@ public/schemata/
       "description": "Vollständiges Schema-Set",
       "defaultVersion": "1.8.1",
       "path": "default"
+    },
+    "mds_oeh": {
+      "name": "MDS OEH",
+      "description": "OEH Metadatenset mit MDS-spezifischen Anpassungen",
+      "defaultVersion": "1.8.1",
+      "path": "mds_oeh",
+      "basedOn": "default@1.8.1"
     }
   },
   "defaultContext": "default"
@@ -223,7 +232,9 @@ schemata-export-2026-02-23.zip
 │       └── ...
 └── mds_oeh/
     ├── manifest.json
-    └── v1.8.0/
+    ├── v1.8.0/
+    │   └── ...
+    └── v1.8.1/
         └── ...
 ```
 

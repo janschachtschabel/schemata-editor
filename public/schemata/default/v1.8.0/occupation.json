@@ -9,7 +9,6 @@
   "groups": [
     {
       "id": "occupation",
-      "icon": "work",
       "label": {
         "de": "Berufe",
         "en": "Occupations"
@@ -29,8 +28,8 @@
         "en": "Hierarchical vocabulary for occupations (occupational profiles) with mappings to ISCO, ESCO and KldB. Use the vocabulary labels exactly as listed, including multi-word labels and parentheses."
       },
       "prompt": {
-        "de": "Beruf(e) aus dem hierarchischen Vokabular. Verwende EXAKT die Labels, z.B. 'Lehrkraft (Schule)', 'Pflegefachkraft', 'Softwareentwickler/in'.",
-        "en": "Occupation(s) from the hierarchical vocabulary. Use EXACT labels, e.g. 'Teacher (School)', 'Nursing professional', 'Software Developer'."
+        "de": "",
+        "en": ""
       },
       "promptInstructions": {
         "labelExactMatch": true
@@ -217,8 +216,8 @@
         "en": "Categorization of the occupation"
       },
       "prompt": {
-        "de": "Berufskategorie, z.B. 'Bildungsberufe', 'Gesundheitsberufe', 'Technische Berufe (inkl. IT)'.",
-        "en": "Occupational category, e.g. 'Educational professions', 'Health professions', 'Technical professions (including IT)'."
+        "de": "",
+        "en": ""
       },
       "system": {
         "path": "oeh:occupationalCategory",
@@ -249,8 +248,8 @@
         "en": "Required education or training"
       },
       "prompt": {
-        "de": "Bildungsvoraussetzungen, z.B. 'Abitur', 'Bachelorabschluss Informatik', 'Abgeschlossene Berufsausbildung'.",
-        "en": "Education requirements, e.g. 'High school diploma', 'Bachelor in Computer Science', 'Completed vocational training'."
+        "de": "",
+        "en": ""
       },
       "system": {
         "path": "oeh:educationRequirements",
@@ -281,8 +280,8 @@
         "en": "Required professional experience"
       },
       "prompt": {
-        "de": "Erfahrungsanforderungen, z.B. '3 Jahre Berufserfahrung', 'Praktikum im Pflegebereich', 'Keine Erfahrung erforderlich'.",
-        "en": "Experience requirements, e.g. '3 years professional experience', 'Internship in nursing', 'No experience required'."
+        "de": "",
+        "en": ""
       },
       "system": {
         "path": "oeh:experienceRequirements",
@@ -313,8 +312,8 @@
         "en": "Required qualifications or certificates"
       },
       "prompt": {
-        "de": "Qualifikationen/Zertifikate, z.B. 'Staatsexamen', 'CCNA', 'F\u00fchrerschein Klasse B'.",
-        "en": "Qualifications/certificates, e.g. 'State examination', 'CCNA', 'Driver license class B'."
+        "de": "",
+        "en": ""
       },
       "system": {
         "path": "oeh:qualifications",
@@ -345,8 +344,8 @@
         "en": "Required skills and competencies"
       },
       "prompt": {
-        "de": "F\u00e4higkeiten/Kompetenzen, z.B. 'Projektmanagement', 'Python', 'Teamf\u00fchrung', 'Kommunikation'.",
-        "en": "Skills/competencies, e.g. 'Project management', 'Python', 'Team leadership', 'Communication'."
+        "de": "",
+        "en": ""
       },
       "system": {
         "path": "oeh:skills",
@@ -379,8 +378,8 @@
         "en": "Geographic scope of the occupation (e.g. DE, EU, global)"
       },
       "prompt": {
-        "de": "Geltungsbereich, z.B. 'Deutschland', 'EU', 'Global'.",
-        "en": "Geographic scope, e.g. 'Germany', 'EU', 'Global'."
+        "de": "",
+        "en": ""
       },
       "system": {
         "path": "oeh:occupationLocation",

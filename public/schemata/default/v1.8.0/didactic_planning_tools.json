@@ -10,7 +10,6 @@
   "groups": [
     {
       "id": "method_taxon",
-      "icon": "auto_stories",
       "label": {
         "de": "Instrument (Vokabular)",
         "en": "Instrument (Vocabulary)"
@@ -18,7 +17,6 @@
     },
     {
       "id": "planning_core",
-      "icon": "edit_note",
       "label": {
         "de": "Planungs-Kern",
         "en": "Planning Core"
@@ -26,7 +24,6 @@
     },
     {
       "id": "phases",
-      "icon": "timeline",
       "label": {
         "de": "Unterrichtsphasen",
         "en": "Lesson Phases"
@@ -34,7 +31,6 @@
     },
     {
       "id": "interaction",
-      "icon": "groups",
       "label": {
         "de": "Interaktion (ICAP)",
         "en": "Interaction (ICAP)"
@@ -42,7 +38,6 @@
     },
     {
       "id": "objectives",
-      "icon": "flag",
       "label": {
         "de": "Lernziele/Taxonomien",
         "en": "Learning Objectives/Taxonomies"
@@ -50,7 +45,6 @@
     },
     {
       "id": "assessment",
-      "icon": "quiz",
       "label": {
         "de": "Assessment",
         "en": "Assessment"
@@ -58,7 +52,6 @@
     },
     {
       "id": "differentiation",
-      "icon": "tune",
       "label": {
         "de": "Differenzierung",
         "en": "Differentiation"
@@ -66,7 +59,6 @@
     },
     {
       "id": "context",
-      "icon": "place",
       "label": {
         "de": "Kontext (Modalität/Ort)",
         "en": "Context (Modality/Location)"
@@ -86,8 +78,8 @@
         "en": "Didactic planning tools with teaching methods & techniques, didactic patterns, process frameworks and concrete lesson plans."
       },
       "prompt": {
-        "de": "Didaktisches Planungsinstrument aus dem SKOS-Vokabular. Verwende EXAKT die Labels, z.B. 'Einstieg & Aktivierung', 'Didaktische Entwurfsmuster', 'Baustein (10–40 min)'.",
-        "en": "Didactic planning tool from the SKOS vocabulary. Use EXACT labels, e.g. 'Introduction & Activation', 'Didactic Design Patterns', 'Module (10–40 min)'."
+        "de": "",
+        "en": ""
       },
       "system": {
         "path": "dpt:concept",
@@ -117,104 +109,91 @@
                 "de": "Einstieg & Aktivierung",
                 "en": "Introduction & Activation"
               },
-              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/11",
-              "broader": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/1"
+              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/11"
             },
             {
               "label": {
                 "de": "Orientierung & Vorstrukturierung",
                 "en": "Orientation & Pre-structuring"
               },
-              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/12",
-              "broader": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/1"
+              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/12"
             },
             {
               "label": {
                 "de": "Darstellung & Instruktion",
                 "en": "Presentation & Instruction"
               },
-              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/13",
-              "broader": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/1"
+              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/13"
             },
             {
               "label": {
                 "de": "Erarbeitung & Konstruktion",
                 "en": "Development & Construction"
               },
-              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/14",
-              "broader": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/1"
+              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/14"
             },
             {
               "label": {
                 "de": "Übung & Festigung",
                 "en": "Practice & Consolidation"
               },
-              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/15",
-              "broader": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/1"
+              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/15"
             },
             {
               "label": {
                 "de": "Anwendung & Problemlösen",
                 "en": "Application & Problem Solving"
               },
-              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/16",
-              "broader": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/1"
+              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/16"
             },
             {
               "label": {
                 "de": "Kommunikation & Diskurs",
                 "en": "Communication & Discourse"
               },
-              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/17",
-              "broader": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/1"
+              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/17"
             },
             {
               "label": {
                 "de": "Kooperation & Kollaboration",
                 "en": "Cooperation & Collaboration"
               },
-              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/18",
-              "broader": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/1"
+              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/18"
             },
             {
               "label": {
                 "de": "Erfahrungs- & Handlungsorientierung",
                 "en": "Experience & Action Orientation"
               },
-              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/19",
-              "broader": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/1"
+              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/19"
             },
             {
               "label": {
                 "de": "Kreative Produktion & Gestaltung",
                 "en": "Creative Production & Design"
               },
-              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/110",
-              "broader": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/1"
+              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/110"
             },
             {
               "label": {
                 "de": "Reflexion & Metakognition",
                 "en": "Reflection & Metacognition"
               },
-              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/111",
-              "broader": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/1"
+              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/111"
             },
             {
               "label": {
                 "de": "Assessment & Prüfung",
                 "en": "Assessment & Examination"
               },
-              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/112",
-              "broader": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/1"
+              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/112"
             },
             {
               "label": {
                 "de": "Lernorganisation & Steuerung",
                 "en": "Learning Organization & Control"
               },
-              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/113",
-              "broader": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/1"
+              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/113"
             },
             {
               "label": {
@@ -228,64 +207,56 @@
                 "de": "Lehr-Lern-Prozess",
                 "en": "Teaching-Learning Process"
               },
-              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/21",
-              "broader": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/2"
+              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/21"
             },
             {
               "label": {
                 "de": "Lernumgebung & Raumgestaltung",
                 "en": "Learning Environment & Space Design"
               },
-              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/22",
-              "broader": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/2"
+              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/22"
             },
             {
               "label": {
                 "de": "Soziale Interaktion",
                 "en": "Social Interaction"
               },
-              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/23",
-              "broader": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/2"
+              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/23"
             },
             {
               "label": {
                 "de": "Methodische Ausrichtung",
                 "en": "Methodical Orientation"
               },
-              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/24",
-              "broader": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/2"
+              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/24"
             },
             {
               "label": {
                 "de": "Technologische Integration",
                 "en": "Technological Integration"
               },
-              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/25",
-              "broader": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/2"
+              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/25"
             },
             {
               "label": {
                 "de": "Assessment & Feedback",
                 "en": "Assessment & Feedback"
               },
-              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/26",
-              "broader": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/2"
+              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/26"
             },
             {
               "label": {
                 "de": "Curriculare Organisation",
                 "en": "Curricular Organization"
               },
-              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/27",
-              "broader": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/2"
+              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/27"
             },
             {
               "label": {
                 "de": "Individuelle Förderung & Inklusion",
                 "en": "Individual Support & Inclusion"
               },
-              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/28",
-              "broader": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/2"
+              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/28"
             },
             {
               "label": {
@@ -299,88 +270,77 @@
                 "de": "Angeleitet & strukturiert",
                 "en": "Guided & Structured"
               },
-              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/31",
-              "broader": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/3"
+              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/31"
             },
             {
               "label": {
                 "de": "Entdeckend & forschend",
                 "en": "Discovering & Researching"
               },
-              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/32",
-              "broader": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/3"
+              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/32"
             },
             {
               "label": {
                 "de": "Problemlösend & fallorientiert",
                 "en": "Problem-Solving & Case-Oriented"
               },
-              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/33",
-              "broader": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/3"
+              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/33"
             },
             {
               "label": {
                 "de": "Diskursiv & gemeinsam weiterdenken",
                 "en": "Discursive & Collaborative Thinking"
               },
-              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/34",
-              "broader": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/3"
+              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/34"
             },
             {
               "label": {
                 "de": "Projektbasiert & gestaltend",
                 "en": "Project-based & design-oriented"
               },
-              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/35",
-              "broader": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/3"
+              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/35"
             },
             {
               "label": {
                 "de": "Erfahrungsorientiert & praktisch",
                 "en": "Experience-oriented & practical"
               },
-              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/36",
-              "broader": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/3"
+              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/36"
             },
             {
               "label": {
                 "de": "Übend & festigend",
                 "en": "Practicing & consolidating"
               },
-              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/37",
-              "broader": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/3"
+              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/37"
             },
             {
               "label": {
                 "de": "Ergebnis- & rückwärtsorientiert",
                 "en": "Outcome- & backward-oriented"
               },
-              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/38",
-              "broader": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/3"
+              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/38"
             },
             {
               "label": {
                 "de": "Selbstreguliert & reflektierend",
                 "en": "Self-regulated & reflective"
               },
-              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/39",
-              "broader": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/3"
+              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/39"
             },
             {
               "label": {
                 "de": "Wahl-/pfadgesteuert & personalisiert",
                 "en": "Choice/path-driven & personalized"
               },
-              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/310",
-              "broader": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/3"
+              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/310"
             },
             {
               "label": {
                 "de": "Zeitlich/örtlich flexibel",
                 "en": "Time/location flexible"
               },
-              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/311",
-              "broader": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/3"
+              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/311"
             },
             {
               "label": {
@@ -394,35 +354,30 @@
                 "de": "Baustein (10–40 min)",
                 "en": "Module (10–40 min)"
               },
-              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/41",
-              "broader": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/4"
+              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/41"
             },
             {
               "label": {
                 "de": "Stunde / Block (45–180 min)",
                 "en": "Hour / Block (45–180 min)"
               },
-              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/42",
-              "broader": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/4"
+              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/42"
             },
             {
               "label": {
                 "de": "Einheit (2–8 Wochen)",
                 "en": "Unit (2–8 weeks)"
               },
-              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/43",
-              "broader": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/4"
+              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/43"
             },
             {
               "label": {
                 "de": "Modul / Kurs (8–16+ Wochen)",
                 "en": "Module / Course (8–16+ weeks)"
               },
-              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/44",
-              "broader": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/4"
+              "uri": "http://w3id.org/openeduhub/vocabs/didacticPlanningTools/44"
             }
-          ],
-          "hierarchical": true
+          ]
         },
         "normalization": {
           "trim": true
@@ -437,12 +392,12 @@
         "en": "Granularity (Action Level)"
       },
       "description": {
-        "de": "Auf welcher Planungsebene ist das Instrument angesiedelt – vom Bildungssystem bis zur einzelnen Aktivität.",
-        "en": "At which planning level the instrument is situated – from education system down to single activity."
+        "de": "SYS, PR, MO, KU, SI, PH, AK",
+        "en": "SYS, PR, MO, KU, SI, PH, AK"
       },
       "prompt": {
-        "de": "Handlungsebene. Verwende EXAKT: 'SYS – Bildungssystem', 'PR – Programm', 'MO – Modul', 'KU – Kurs', 'SI – Sitzung/Stunde', 'PH – Phase', 'AK – Aktivität'.",
-        "en": "Action level. Use EXACT: 'SYS – Education System', 'PR – Program', 'MO – Module', 'KU – Course', 'SI – Session/Lesson', 'PH – Phase', 'AK – Activity'."
+        "de": "",
+        "en": ""
       },
       "system": {
         "path": "dpf:granularity",
@@ -459,52 +414,45 @@
           "type": "closed",
           "concepts": [
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptGranularity/SYS",
               "label": {
-                "de": "SYS – Bildungssystem",
-                "en": "SYS – Education System"
+                "de": "SYS",
+                "en": "SYS"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptGranularity/PR",
               "label": {
-                "de": "PR – Programm",
-                "en": "PR – Program"
+                "de": "PR",
+                "en": "PR"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptGranularity/MO",
               "label": {
-                "de": "MO – Modul",
-                "en": "MO – Module"
+                "de": "MO",
+                "en": "MO"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptGranularity/KU",
               "label": {
-                "de": "KU – Kurs",
-                "en": "KU – Course"
+                "de": "KU",
+                "en": "KU"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptGranularity/SI",
               "label": {
-                "de": "SI – Sitzung/Stunde",
-                "en": "SI – Session/Lesson"
+                "de": "SI",
+                "en": "SI"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptGranularity/PH",
               "label": {
-                "de": "PH – Phase",
-                "en": "PH – Phase"
+                "de": "PH",
+                "en": "PH"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptGranularity/AK",
               "label": {
-                "de": "AK – Aktivität",
-                "en": "AK – Activity"
+                "de": "AK",
+                "en": "AK"
               }
             }
           ]
@@ -520,12 +468,12 @@
         "en": "Didactic Function"
       },
       "description": {
-        "de": "Welche didaktische Grundfunktion erfüllt die Aktivität im Lehr-Lern-Prozess.",
-        "en": "Which core didactic function the activity serves in the teaching-learning process."
+        "de": "ACTV, ORNT, INST, CONS, PRAC, APPL, DISC, COLL, EXPE, CREA, REFL, ASMT, ORGA",
+        "en": "ACTV, ORNT, INST, CONS, PRAC, APPL, DISC, COLL, EXPE, CREA, REFL, ASMT, ORGA"
       },
       "prompt": {
-        "de": "Didaktische Funktion. Verwende EXAKT eines der Labels, z.B. 'ACTV – Aktivierung', 'INST – Instruktion', 'REFL – Reflexion'.",
-        "en": "Didactic function. Use EXACT one of the labels, e.g. 'ACTV – Activation', 'INST – Instruction', 'REFL – Reflection'."
+        "de": "",
+        "en": ""
       },
       "system": {
         "path": "dpf:funktion",
@@ -542,94 +490,81 @@
           "type": "closed",
           "concepts": [
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptFunction/ACTV",
               "label": {
-                "de": "ACTV – Aktivierung",
-                "en": "ACTV – Activation"
+                "de": "ACTV",
+                "en": "ACTV"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptFunction/ORNT",
               "label": {
-                "de": "ORNT – Orientierung",
-                "en": "ORNT – Orientation"
+                "de": "ORNT",
+                "en": "ORNT"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptFunction/INST",
               "label": {
-                "de": "INST – Instruktion",
-                "en": "INST – Instruction"
+                "de": "INST",
+                "en": "INST"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptFunction/CONS",
               "label": {
-                "de": "CONS – Konstruktion",
-                "en": "CONS – Construction"
+                "de": "CONS",
+                "en": "CONS"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptFunction/PRAC",
               "label": {
-                "de": "PRAC – Übung",
-                "en": "PRAC – Practice"
+                "de": "PRAC",
+                "en": "PRAC"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptFunction/APPL",
               "label": {
-                "de": "APPL – Anwendung",
-                "en": "APPL – Application"
+                "de": "APPL",
+                "en": "APPL"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptFunction/DISC",
               "label": {
-                "de": "DISC – Diskurs",
-                "en": "DISC – Discourse"
+                "de": "DISC",
+                "en": "DISC"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptFunction/COLL",
               "label": {
-                "de": "COLL – Kollaboration",
-                "en": "COLL – Collaboration"
+                "de": "COLL",
+                "en": "COLL"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptFunction/EXPE",
               "label": {
-                "de": "EXPE – Erfahrung",
-                "en": "EXPE – Experience"
+                "de": "EXPE",
+                "en": "EXPE"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptFunction/CREA",
               "label": {
-                "de": "CREA – Kreation",
-                "en": "CREA – Creation"
+                "de": "CREA",
+                "en": "CREA"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptFunction/REFL",
               "label": {
-                "de": "REFL – Reflexion",
-                "en": "REFL – Reflection"
+                "de": "REFL",
+                "en": "REFL"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptFunction/ASMT",
               "label": {
-                "de": "ASMT – Assessment",
-                "en": "ASMT – Assessment"
+                "de": "ASMT",
+                "en": "ASMT"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptFunction/ORGA",
               "label": {
-                "de": "ORGA – Organisation",
-                "en": "ORGA – Organization"
+                "de": "ORGA",
+                "en": "ORGA"
               }
             }
           ]
@@ -645,12 +580,12 @@
         "en": "Phase"
       },
       "description": {
-        "de": "In welcher Unterrichtsphase wird die Aktivität eingesetzt – vom Einstieg bis zur Ergebnissicherung.",
-        "en": "In which lesson phase the activity is used – from introduction to consolidation."
+        "de": "EINS, ORIE, INPT, ERKU, ERAR, UEBE, ANWL, SICH, REFL, ASMT, ORGA",
+        "en": "EINS, ORIE, INPT, ERKU, ERAR, UEBE, ANWL, SICH, REFL, ASMT, ORGA"
       },
       "prompt": {
-        "de": "Unterrichtsphase. Verwende EXAKT eines der Labels, z.B. 'EINS – Einstieg', 'ERAR – Erarbeitung', 'SICH – Sicherung'.",
-        "en": "Lesson phase. Use EXACT one of the labels, e.g. 'EINS – Introduction', 'ERAR – Development', 'SICH – Consolidation'."
+        "de": "",
+        "en": ""
       },
       "system": {
         "path": "dpf:learning_phase",
@@ -667,80 +602,69 @@
           "type": "closed",
           "concepts": [
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptPhase/EINS",
               "label": {
-                "de": "EINS – Einstieg",
-                "en": "EINS – Introduction"
+                "de": "EINS",
+                "en": "EINS"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptPhase/ORIE",
               "label": {
-                "de": "ORIE – Orientierung",
-                "en": "ORIE – Orientation"
+                "de": "ORIE",
+                "en": "ORIE"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptPhase/INPT",
               "label": {
-                "de": "INPT – Input",
-                "en": "INPT – Input"
+                "de": "INPT",
+                "en": "INPT"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptPhase/ERKU",
               "label": {
-                "de": "ERKU – Erkundung",
-                "en": "ERKU – Exploration"
+                "de": "ERKU",
+                "en": "ERKU"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptPhase/ERAR",
               "label": {
-                "de": "ERAR – Erarbeitung",
-                "en": "ERAR – Development"
+                "de": "ERAR",
+                "en": "ERAR"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptPhase/UEBE",
               "label": {
-                "de": "UEBE – Übung",
-                "en": "UEBE – Practice"
+                "de": "UEBE",
+                "en": "UEBE"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptPhase/ANWL",
               "label": {
-                "de": "ANWL – Anwendung",
-                "en": "ANWL – Application"
+                "de": "ANWL",
+                "en": "ANWL"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptPhase/SICH",
               "label": {
-                "de": "SICH – Sicherung",
-                "en": "SICH – Consolidation"
+                "de": "SICH",
+                "en": "SICH"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptPhase/REFL",
               "label": {
-                "de": "REFL – Reflexion",
-                "en": "REFL – Reflection"
+                "de": "REFL",
+                "en": "REFL"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptPhase/ASMT",
               "label": {
-                "de": "ASMT – Assessment",
-                "en": "ASMT – Assessment"
+                "de": "ASMT",
+                "en": "ASMT"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptPhase/ORGA",
               "label": {
-                "de": "ORGA – Organisation",
-                "en": "ORGA – Organization"
+                "de": "ORGA",
+                "en": "ORGA"
               }
             }
           ]
@@ -756,12 +680,12 @@
         "en": "ICAP – Primary Mode"
       },
       "description": {
-        "de": "ICAP-Framework: Primärer kognitiver Engagementmodus der Lernenden (Passiv → Aktiv → Konstruktiv → Interaktiv).",
-        "en": "ICAP framework: Primary cognitive engagement mode of learners (Passive → Active → Constructive → Interactive)."
+        "de": "PASS, ACTI, CSTR, INTR",
+        "en": "PASS, ACTI, CSTR, INTR"
       },
       "prompt": {
-        "de": "ICAP-Primärmodus. Verwende EXAKT: 'PASS – Passiv', 'ACTI – Aktiv', 'CSTR – Konstruktiv', 'INTR – Interaktiv'.",
-        "en": "ICAP primary mode. Use EXACT: 'PASS – Passive', 'ACTI – Active', 'CSTR – Constructive', 'INTR – Interactive'."
+        "de": "",
+        "en": ""
       },
       "system": {
         "path": "dpf:icap_primary",
@@ -778,31 +702,27 @@
           "type": "closed",
           "concepts": [
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcap/PASS",
               "label": {
-                "de": "PASS – Passiv",
-                "en": "PASS – Passive"
+                "de": "PASS",
+                "en": "PASS"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcap/ACTI",
               "label": {
-                "de": "ACTI – Aktiv",
-                "en": "ACTI – Active"
+                "de": "ACTI",
+                "en": "ACTI"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcap/CSTR",
               "label": {
-                "de": "CSTR – Konstruktiv",
-                "en": "CSTR – Constructive"
+                "de": "CSTR",
+                "en": "CSTR"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcap/INTR",
               "label": {
-                "de": "INTR – Interaktiv",
-                "en": "INTR – Interactive"
+                "de": "INTR",
+                "en": "INTR"
               }
             }
           ]
@@ -818,12 +738,12 @@
         "en": "ICAP – Submodes"
       },
       "description": {
-        "de": "Konkrete Lernaktivitäten, die den ICAP-Modus operationalisieren (Mehrfachwahl).",
-        "en": "Concrete learning activities that operationalize the ICAP mode (multiple choice)."
+        "de": "Mehrfachwahl (LISTN, VIEW, READ, …, COLAB)",
+        "en": "Multiple choice (LISTN, VIEW, READ, …, COLAB)"
       },
       "prompt": {
-        "de": "ICAP – Submodes. Verwende EXAKT die Labels, z.B. 'LISTN – Zuhören', 'VIEW – Betrachten', 'READ – Lesen'.",
-        "en": "ICAP – Submodes. Use EXACT labels, e.g. 'LISTN – Listening', 'VIEW – Viewing', 'READ – Reading'."
+        "de": "",
+        "en": ""
       },
       "system": {
         "path": "dpf:icap_submodes",
@@ -840,241 +760,207 @@
           "type": "closed",
           "concepts": [
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcapSub/LISTN",
               "label": {
-                "de": "LISTN – Zuhören",
-                "en": "LISTN – Listening"
+                "de": "LISTN",
+                "en": "LISTN"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcapSub/VIEW",
               "label": {
-                "de": "VIEW – Betrachten",
-                "en": "VIEW – Viewing"
+                "de": "VIEW",
+                "en": "VIEW"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcapSub/READ",
               "label": {
-                "de": "READ – Lesen",
-                "en": "READ – Reading"
+                "de": "READ",
+                "en": "READ"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcapSub/SUMR",
               "label": {
-                "de": "SUMR – Zusammenfassen (mündl.)",
-                "en": "SUMR – Summarizing (oral)"
+                "de": "SUMR",
+                "en": "SUMR"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcapSub/HILIT",
               "label": {
-                "de": "HILIT – Hervorheben",
-                "en": "HILIT – Highlighting"
+                "de": "HILIT",
+                "en": "HILIT"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcapSub/REPT",
               "label": {
-                "de": "REPT – Wiederholen",
-                "en": "REPT – Repeating"
+                "de": "REPT",
+                "en": "REPT"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcapSub/MANIP",
               "label": {
-                "de": "MANIP – Manipulieren",
-                "en": "MANIP – Manipulating"
+                "de": "MANIP",
+                "en": "MANIP"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcapSub/RECL",
               "label": {
-                "de": "RECL – Abrufen/Erinnern",
-                "en": "RECL – Recalling"
+                "de": "RECL",
+                "en": "RECL"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcapSub/NOTAT",
               "label": {
-                "de": "NOTAT – Notieren",
-                "en": "NOTAT – Note-taking"
+                "de": "NOTAT",
+                "en": "NOTAT"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcapSub/QUIZ",
               "label": {
-                "de": "QUIZ – Quiz beantworten",
-                "en": "QUIZ – Answering Quiz"
+                "de": "QUIZ",
+                "en": "QUIZ"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcapSub/FEED",
               "label": {
-                "de": "FEED – Feedback geben",
-                "en": "FEED – Giving Feedback"
+                "de": "FEED",
+                "en": "FEED"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcapSub/PHYS",
               "label": {
-                "de": "PHYS – Physisches Handeln",
-                "en": "PHYS – Physical Action"
+                "de": "PHYS",
+                "en": "PHYS"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcapSub/SEXP",
               "label": {
-                "de": "SEXP – Selbsterklären",
-                "en": "SEXP – Self-explaining"
+                "de": "SEXP",
+                "en": "SEXP"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcapSub/EXMP",
               "label": {
-                "de": "EXMP – Beispiele geben",
-                "en": "EXMP – Giving Examples"
+                "de": "EXMP",
+                "en": "EXMP"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcapSub/SUMM",
               "label": {
-                "de": "SUMM – Zusammenfassen (schriftl.)",
-                "en": "SUMM – Summarizing (written)"
+                "de": "SUMM",
+                "en": "SUMM"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcapSub/CMAP",
               "label": {
-                "de": "CMAP – Concept Mapping",
-                "en": "CMAP – Concept Mapping"
+                "de": "CMAP",
+                "en": "CMAP"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcapSub/ANNO",
               "label": {
-                "de": "ANNO – Annotieren",
-                "en": "ANNO – Annotating"
+                "de": "ANNO",
+                "en": "ANNO"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcapSub/VISU",
               "label": {
-                "de": "VISU – Visualisieren",
-                "en": "VISU – Visualizing"
+                "de": "VISU",
+                "en": "VISU"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcapSub/GENQ",
               "label": {
-                "de": "GENQ – Fragen generieren",
-                "en": "GENQ – Generating Questions"
+                "de": "GENQ",
+                "en": "GENQ"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcapSub/PRED",
               "label": {
-                "de": "PRED – Vorhersagen",
-                "en": "PRED – Predicting"
+                "de": "PRED",
+                "en": "PRED"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcapSub/PROB",
               "label": {
-                "de": "PROB – Problemlösen",
-                "en": "PROB – Problem Solving"
+                "de": "PROB",
+                "en": "PROB"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcapSub/CREAT",
               "label": {
-                "de": "CREAT – Erstellen/Erschaffen",
-                "en": "CREAT – Creating"
+                "de": "CREAT",
+                "en": "CREAT"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcapSub/PDIS",
               "label": {
-                "de": "PDIS – Paardiskussion",
-                "en": "PDIS – Pair Discussion"
+                "de": "PDIS",
+                "en": "PDIS"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcapSub/ARGU",
               "label": {
-                "de": "ARGU – Argumentieren",
-                "en": "ARGU – Arguing"
+                "de": "ARGU",
+                "en": "ARGU"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcapSub/DEBA",
               "label": {
-                "de": "DEBA – Debattieren",
-                "en": "DEBA – Debating"
+                "de": "DEBA",
+                "en": "DEBA"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcapSub/NEGOT",
               "label": {
-                "de": "NEGOT – Verhandeln",
-                "en": "NEGOT – Negotiating"
+                "de": "NEGOT",
+                "en": "NEGOT"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcapSub/COEDT",
               "label": {
-                "de": "COEDT – Gemeinsam bearbeiten",
-                "en": "COEDT – Co-editing"
+                "de": "COEDT",
+                "en": "COEDT"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcapSub/QAREF",
               "label": {
-                "de": "QAREF – Fragen & Antworten",
-                "en": "QAREF – Q&A with Reflection"
+                "de": "QAREF",
+                "en": "QAREF"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcapSub/PREV",
               "label": {
-                "de": "PREV – Peer Review",
-                "en": "PREV – Peer Review"
+                "de": "PREV",
+                "en": "PREV"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcapSub/TEACH",
               "label": {
-                "de": "TEACH – Lehren/Erklären",
-                "en": "TEACH – Teaching/Explaining"
+                "de": "TEACH",
+                "en": "TEACH"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcapSub/COSLV",
               "label": {
-                "de": "COSLV – Gemeinsam lösen",
-                "en": "COSLV – Co-solving"
+                "de": "COSLV",
+                "en": "COSLV"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcapSub/FACIL",
               "label": {
-                "de": "FACIL – Moderieren",
-                "en": "FACIL – Facilitating"
+                "de": "FACIL",
+                "en": "FACIL"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcapSub/CHAT",
               "label": {
-                "de": "CHAT – Diskutieren (Chat)",
-                "en": "CHAT – Discussing (Chat)"
+                "de": "CHAT",
+                "en": "CHAT"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcapSub/COLAB",
               "label": {
-                "de": "COLAB – Kollaboratives Arbeiten",
-                "en": "COLAB – Collaborative Work"
+                "de": "COLAB",
+                "en": "COLAB"
               }
             }
           ]
@@ -1093,12 +979,12 @@
         "en": "ICAP – Meta Activities"
       },
       "description": {
-        "de": "Metakognitive Aktivitäten der Lernenden zur Selbstregulation.",
-        "en": "Metacognitive learner activities for self-regulation."
+        "de": "GOAL, PLAN, MONI, EVAL, REFL",
+        "en": "GOAL, PLAN, MONI, EVAL, REFL"
       },
       "prompt": {
-        "de": "ICAP – Metaaktivitäten. Verwende EXAKT die Labels, z.B. 'GOAL – Zielsetzung', 'PLAN – Planung', 'MONI – Monitoring'.",
-        "en": "ICAP – Meta Activities. Use EXACT labels, e.g. 'GOAL – Goal Setting', 'PLAN – Planning', 'MONI – Monitoring'."
+        "de": "",
+        "en": ""
       },
       "system": {
         "path": "dpf:icap_meta",
@@ -1112,38 +998,33 @@
           "type": "closed",
           "concepts": [
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcapMeta/GOAL",
               "label": {
-                "de": "GOAL – Zielsetzung",
-                "en": "GOAL – Goal Setting"
+                "de": "GOAL",
+                "en": "GOAL"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcapMeta/PLAN",
               "label": {
-                "de": "PLAN – Planung",
-                "en": "PLAN – Planning"
+                "de": "PLAN",
+                "en": "PLAN"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcapMeta/MONI",
               "label": {
-                "de": "MONI – Monitoring",
-                "en": "MONI – Monitoring"
+                "de": "MONI",
+                "en": "MONI"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcapMeta/EVAL",
               "label": {
-                "de": "EVAL – Evaluation",
-                "en": "EVAL – Evaluation"
+                "de": "EVAL",
+                "en": "EVAL"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptIcapMeta/REFL",
               "label": {
-                "de": "REFL – Reflexion",
-                "en": "REFL – Reflection"
+                "de": "REFL",
+                "en": "REFL"
               }
             }
           ]
@@ -1151,10 +1032,7 @@
         "normalization": {
           "deduplicate": true
         },
-        "repo_field": false,
-        "index": {
-          "keyword": true
-        }
+        "repo_field": false
       }
     },
     {
@@ -1169,8 +1047,8 @@
         "en": "Array of objective objects (domain, framework, levelCode, optional label/why)."
       },
       "prompt": {
-        "de": "Lernziel-Objekte mit domain (KOG/AFF/PSY/EMO/METH), framework, levelCode. Optional: label, why.",
-        "en": "Learning objective objects with domain (KOG/AFF/PSY/EMO/METH), framework, levelCode. Optional: label, why."
+        "de": "",
+        "en": ""
       },
       "system": {
         "path": "dpf:learning_objectives",
@@ -1217,12 +1095,12 @@
         "en": "Purpose/Timing"
       },
       "description": {
-        "de": "Zweck und Timing des Assessments im Lehr-Lern-Prozess.",
-        "en": "Purpose and timing of assessment in the teaching-learning process."
+        "de": "DIAG, FORM, SUMM (Mehrfachwahl)",
+        "en": "DIAG, FORM, SUMM (multiple choice)"
       },
       "prompt": {
-        "de": "Zweck/Timing. Verwende EXAKT die Labels, z.B. 'DIAG – Diagnostisch', 'FORM – Formativ', 'SUMM – Summativ'.",
-        "en": "Purpose/Timing. Use EXACT labels, e.g. 'DIAG – Diagnostic', 'FORM – Formative', 'SUMM – Summative'."
+        "de": "",
+        "en": ""
       },
       "system": {
         "path": "dpf:assessment_purpose",
@@ -1236,24 +1114,21 @@
           "type": "closed",
           "concepts": [
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptAsmtPurpose/DIAG",
               "label": {
-                "de": "DIAG – Diagnostisch",
-                "en": "DIAG – Diagnostic"
+                "de": "DIAG",
+                "en": "DIAG"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptAsmtPurpose/FORM",
               "label": {
-                "de": "FORM – Formativ",
-                "en": "FORM – Formative"
+                "de": "FORM",
+                "en": "FORM"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptAsmtPurpose/SUMM",
               "label": {
-                "de": "SUMM – Summativ",
-                "en": "SUMM – Summative"
+                "de": "SUMM",
+                "en": "SUMM"
               }
             }
           ]
@@ -1261,10 +1136,7 @@
         "normalization": {
           "deduplicate": true
         },
-        "repo_field": false,
-        "index": {
-          "keyword": true
-        }
+        "repo_field": false
       }
     },
     {
@@ -1275,12 +1147,12 @@
         "en": "Actor/Role"
       },
       "description": {
-        "de": "Wer bewertet – Lehrkraft, Peers, Selbst, automatisiert oder extern.",
-        "en": "Who assesses – teacher, peers, self, automated, or external."
+        "de": "LEHR, PEER, SELF, AUTO, EXTERN (Mehrfachwahl)",
+        "en": "LEHR, PEER, SELF, AUTO, EXTERN (multiple choice)"
       },
       "prompt": {
-        "de": "Akteur/Rolle. Verwende EXAKT die Labels, z.B. 'LEHR – Lehrkraft', 'PEER – Peer', 'SELF – Selbst'.",
-        "en": "Actor/Role. Use EXACT labels, e.g. 'LEHR – Teacher', 'PEER – Peer', 'SELF – Self'."
+        "de": "",
+        "en": ""
       },
       "system": {
         "path": "dpf:assessment_agent",
@@ -1294,38 +1166,33 @@
           "type": "closed",
           "concepts": [
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptAsmtAgent/LEHR",
               "label": {
-                "de": "LEHR – Lehrkraft",
-                "en": "LEHR – Teacher"
+                "de": "LEHR",
+                "en": "LEHR"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptAsmtAgent/PEER",
               "label": {
-                "de": "PEER – Peer",
-                "en": "PEER – Peer"
+                "de": "PEER",
+                "en": "PEER"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptAsmtAgent/SELF",
               "label": {
-                "de": "SELF – Selbst",
-                "en": "SELF – Self"
+                "de": "SELF",
+                "en": "SELF"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptAsmtAgent/AUTO",
               "label": {
-                "de": "AUTO – Automatisiert",
-                "en": "AUTO – Automated"
+                "de": "AUTO",
+                "en": "AUTO"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptAsmtAgent/EXTERN",
               "label": {
-                "de": "EXTERN – Extern",
-                "en": "EXTERN – External"
+                "de": "EXTERN",
+                "en": "EXTERN"
               }
             }
           ]
@@ -1333,10 +1200,7 @@
         "normalization": {
           "deduplicate": true
         },
-        "repo_field": false,
-        "index": {
-          "keyword": true
-        }
+        "repo_field": false
       }
     },
     {
@@ -1347,12 +1211,12 @@
         "en": "Reference Norm"
       },
       "description": {
-        "de": "Bezugsnorm der Leistungsbewertung.",
-        "en": "Reference norm for performance assessment."
+        "de": "Standard: KRIT. Optionen: KRIT, IPSA, SOZIAL, NORM",
+        "en": "Default: KRIT. Options: KRIT, IPSA, SOZIAL, NORM"
       },
       "prompt": {
-        "de": "Bezugsnorm. Verwende EXAKT die Labels, z.B. 'KRIT – Kriteriumsorientiert', 'IPSA – Individualnormorientiert', 'SOZIAL – Sozialnormorientiert'.",
-        "en": "Reference Norm. Use EXACT labels, e.g. 'KRIT – Criterion-referenced', 'IPSA – Individual-referenced', 'SOZIAL – Social-referenced'."
+        "de": "",
+        "en": ""
       },
       "system": {
         "path": "dpf:assessment_norm",
@@ -1369,31 +1233,27 @@
           "type": "closed",
           "concepts": [
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptAsmtNorm/KRIT",
               "label": {
-                "de": "KRIT – Kriteriumsorientiert",
-                "en": "KRIT – Criterion-referenced"
+                "de": "KRIT",
+                "en": "KRIT"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptAsmtNorm/IPSA",
               "label": {
-                "de": "IPSA – Individualnormorientiert",
-                "en": "IPSA – Individual-referenced"
+                "de": "IPSA",
+                "en": "IPSA"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptAsmtNorm/SOZIAL",
               "label": {
-                "de": "SOZIAL – Sozialnormorientiert",
-                "en": "SOZIAL – Social-referenced"
+                "de": "SOZIAL",
+                "en": "SOCIAL"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptAsmtNorm/NORM",
               "label": {
-                "de": "NORM – Normorientiert",
-                "en": "NORM – Norm-referenced"
+                "de": "NORM",
+                "en": "NORM"
               }
             }
           ]
@@ -1401,10 +1261,7 @@
         "normalization": {
           "deduplicate": true
         },
-        "repo_field": false,
-        "index": {
-          "keyword": true
-        }
+        "repo_field": false
       }
     },
     {
@@ -1415,12 +1272,12 @@
         "en": "Method/Format"
       },
       "description": {
-        "de": "Format bzw. Methode des Assessments.",
-        "en": "Format or method of assessment."
+        "de": "z. B. QUIZ, WRIT, PRES, PROD, RUBR … (Mehrfachwahl)",
+        "en": "e.g. QUIZ, WRIT, PRES, PROD, RUBR … (multiple choice)"
       },
       "prompt": {
-        "de": "Methode/Format. Verwende EXAKT die Labels, z.B. 'QUIZ – Quiz', 'EXAM – Klausur', 'WRIT – Schriftliche Arbeit'.",
-        "en": "Method/Format. Use EXACT labels, e.g. 'QUIZ – Quiz', 'EXAM – Exam', 'WRIT – Written Work'."
+        "de": "",
+        "en": ""
       },
       "system": {
         "path": "dpf:assessment_method",
@@ -1434,122 +1291,105 @@
           "type": "closed",
           "concepts": [
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptAsmtMethod/QUIZ",
               "label": {
-                "de": "QUIZ – Quiz",
-                "en": "QUIZ – Quiz"
+                "de": "QUIZ",
+                "en": "QUIZ"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptAsmtMethod/EXAM",
               "label": {
-                "de": "EXAM – Klausur",
-                "en": "EXAM – Exam"
+                "de": "EXAM",
+                "en": "EXAM"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptAsmtMethod/WRIT",
               "label": {
-                "de": "WRIT – Schriftliche Arbeit",
-                "en": "WRIT – Written Work"
+                "de": "WRIT",
+                "en": "WRIT"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptAsmtMethod/ORAL",
               "label": {
-                "de": "ORAL – Mündliche Prüfung",
-                "en": "ORAL – Oral Exam"
+                "de": "ORAL",
+                "en": "ORAL"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptAsmtMethod/PRES",
               "label": {
-                "de": "PRES – Präsentation",
-                "en": "PRES – Presentation"
+                "de": "PRES",
+                "en": "PRES"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptAsmtMethod/PERF",
               "label": {
-                "de": "PERF – Performance",
-                "en": "PERF – Performance"
+                "de": "PERF",
+                "en": "PERF"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptAsmtMethod/SIMU",
               "label": {
-                "de": "SIMU – Simulation",
-                "en": "SIMU – Simulation"
+                "de": "SIMU",
+                "en": "SIMU"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptAsmtMethod/PROD",
               "label": {
-                "de": "PROD – Produkt/Artefakt",
-                "en": "PROD – Product/Artifact"
+                "de": "PROD",
+                "en": "PROD"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptAsmtMethod/CASE",
               "label": {
-                "de": "CASE – Fallstudie",
-                "en": "CASE – Case Study"
+                "de": "CASE",
+                "en": "CASE"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptAsmtMethod/PROJ",
               "label": {
-                "de": "PROJ – Projekt",
-                "en": "PROJ – Project"
+                "de": "PROJ",
+                "en": "PROJ"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptAsmtMethod/PORT",
               "label": {
-                "de": "PORT – Portfolio",
-                "en": "PORT – Portfolio"
+                "de": "PORT",
+                "en": "PORT"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptAsmtMethod/REFL",
               "label": {
-                "de": "REFL – Reflexion",
-                "en": "REFL – Reflection"
+                "de": "REFL",
+                "en": "REFL"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptAsmtMethod/DISC",
               "label": {
-                "de": "DISC – Diskussion",
-                "en": "DISC – Discussion"
+                "de": "DISC",
+                "en": "DISC"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptAsmtMethod/OBSV",
               "label": {
-                "de": "OBSV – Beobachtung",
-                "en": "OBSV – Observation"
+                "de": "OBSV",
+                "en": "OBSV"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptAsmtMethod/RUBR",
               "label": {
-                "de": "RUBR – Bewertungsraster",
-                "en": "RUBR – Rubric"
+                "de": "RUBR",
+                "en": "RUBR"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptAsmtMethod/A_TEST",
               "label": {
-                "de": "A_TEST – Automatisierter Test",
-                "en": "A_TEST – Automated Test"
+                "de": "A_TEST",
+                "en": "A_TEST"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptAsmtMethod/A_KEY",
               "label": {
-                "de": "A_KEY – Auto. Schlüsselwortanalyse",
-                "en": "A_KEY – Auto. Keyword Analysis"
+                "de": "A_KEY",
+                "en": "A_KEY"
               }
             }
           ]
@@ -1557,10 +1397,7 @@
         "normalization": {
           "deduplicate": true
         },
-        "repo_field": false,
-        "index": {
-          "keyword": true
-        }
+        "repo_field": false
       }
     },
     {
@@ -1575,8 +1412,8 @@
         "en": "1=Very easy … 5=Advanced"
       },
       "prompt": {
-        "de": "Schwierigkeitsgrad 1–5 (1=Sehr leicht, 3=Mittel, 5=Fortgeschritten).",
-        "en": "Difficulty level 1–5 (1=Very easy, 3=Medium, 5=Advanced)."
+        "de": "",
+        "en": ""
       },
       "system": {
         "path": "dpf:difficulty",
@@ -1594,241 +1431,6 @@
       }
     },
     {
-      "id": "dpf:duration",
-      "group": "planning_core",
-      "label": {
-        "de": "Geschätzte Dauer",
-        "en": "Estimated Duration"
-      },
-      "description": {
-        "de": "Geschätzte Durchführungszeit der Aktivität in Minuten.",
-        "en": "Estimated implementation time of the activity in minutes."
-      },
-      "prompt": {
-        "de": "Geschätzte Dauer in Minuten (z.B. 15, 45, 90).",
-        "en": "Estimated duration in minutes (e.g. 15, 45, 90)."
-      },
-      "system": {
-        "path": "dpf:duration",
-        "uri": "dpf:duration",
-        "datatype": "number",
-        "multiple": false,
-        "required": false,
-        "ask_user": true,
-        "ai_fillable": true,
-        "validation": {
-          "minimum": 1
-        },
-        "index": {
-          "keyword": true
-        },
-        "repo_field": false
-      }
-    },
-    {
-      "id": "dpf:group_size",
-      "group": "context",
-      "label": {
-        "de": "Gruppengröße",
-        "en": "Group Size"
-      },
-      "description": {
-        "de": "Empfohlene Teilnehmerzahl (min–max).",
-        "en": "Recommended number of participants (min–max)."
-      },
-      "prompt": {
-        "de": "Empfohlene Gruppengröße, z.B. '2-4', '15-30', 'beliebig'.",
-        "en": "Recommended group size, e.g. '2-4', '15-30', 'any'."
-      },
-      "system": {
-        "path": "dpf:group_size",
-        "uri": "dpf:group_size",
-        "datatype": "string",
-        "multiple": false,
-        "required": false,
-        "ask_user": true,
-        "ai_fillable": true,
-        "index": {
-          "keyword": true
-        },
-        "normalization": {
-          "trim": true
-        },
-        "repo_field": false
-      }
-    },
-    {
-      "id": "dpf:materials",
-      "group": "planning_core",
-      "label": {
-        "de": "Benötigte Materialien",
-        "en": "Required Materials"
-      },
-      "description": {
-        "de": "Materialien, Medien und Werkzeuge, die für die Durchführung benötigt werden.",
-        "en": "Materials, media, and tools required for implementation."
-      },
-      "prompt": {
-        "de": "Liste der benötigten Materialien, z.B. 'Arbeitsblatt', 'Whiteboard', 'Tablets', 'Post-its'.",
-        "en": "List of required materials, e.g. 'worksheet', 'whiteboard', 'tablets', 'post-its'."
-      },
-      "system": {
-        "path": "dpf:materials",
-        "uri": "dpf:materials",
-        "datatype": "array",
-        "multiple": true,
-        "required": false,
-        "ask_user": true,
-        "ai_fillable": true,
-        "index": {
-          "keyword": true
-        },
-        "normalization": {
-          "trim": true,
-          "deduplicate": true
-        },
-        "repo_field": false
-      }
-    },
-    {
-      "id": "dpf:prior_knowledge",
-      "group": "planning_core",
-      "label": {
-        "de": "Vorwissen / Voraussetzungen",
-        "en": "Prior Knowledge / Prerequisites"
-      },
-      "description": {
-        "de": "Welches Vorwissen oder welche Fähigkeiten die Lernenden mitbringen müssen.",
-        "en": "What prior knowledge or skills learners need to bring."
-      },
-      "prompt": {
-        "de": "Voraussetzungen der Lernenden für diese Aktivität.",
-        "en": "Learner prerequisites for this activity."
-      },
-      "system": {
-        "path": "dpf:prior_knowledge",
-        "uri": "dpf:prior_knowledge",
-        "datatype": "string",
-        "multiple": false,
-        "required": false,
-        "ask_user": true,
-        "ai_fillable": true,
-        "index": {
-          "fulltext": true
-        },
-        "repo_field": false
-      }
-    },
-    {
-      "id": "dpf:teacher_role",
-      "group": "context",
-      "label": {
-        "de": "Rolle der Lehrkraft",
-        "en": "Teacher Role"
-      },
-      "description": {
-        "de": "Welche Rolle die Lehrkraft während der Aktivität einnimmt.",
-        "en": "What role the teacher assumes during the activity."
-      },
-      "prompt": {
-        "de": "Rolle der Lehrkraft. Verwende EXAKT: 'MOD – Moderation', 'INST – Instruktion', 'COACH – Coaching', 'OBSV – Beobachtung', 'FACIL – Facilitation', 'NONE – Keine aktive Rolle'.",
-        "en": "Teacher role. Use EXACT: 'MOD – Moderation', 'INST – Instruction', 'COACH – Coaching', 'OBSV – Observation', 'FACIL – Facilitation', 'NONE – No active role'."
-      },
-      "system": {
-        "path": "dpf:teacher_role",
-        "uri": "dpf:teacher_role",
-        "datatype": "string",
-        "multiple": false,
-        "required": false,
-        "ask_user": true,
-        "ai_fillable": true,
-        "index": {
-          "keyword": true
-        },
-        "vocabulary": {
-          "type": "closed",
-          "concepts": [
-            {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptTeacherRole/MOD",
-              "label": {
-                "de": "MOD – Moderation",
-                "en": "MOD – Moderation"
-              }
-            },
-            {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptTeacherRole/INST",
-              "label": {
-                "de": "INST – Instruktion",
-                "en": "INST – Instruction"
-              }
-            },
-            {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptTeacherRole/COACH",
-              "label": {
-                "de": "COACH – Coaching",
-                "en": "COACH – Coaching"
-              }
-            },
-            {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptTeacherRole/OBSV",
-              "label": {
-                "de": "OBSV – Beobachtung",
-                "en": "OBSV – Observation"
-              }
-            },
-            {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptTeacherRole/FACIL",
-              "label": {
-                "de": "FACIL – Facilitation",
-                "en": "FACIL – Facilitation"
-              }
-            },
-            {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptTeacherRole/NONE",
-              "label": {
-                "de": "NONE – Keine aktive Rolle",
-                "en": "NONE – No active role"
-              }
-            }
-          ]
-        },
-        "repo_field": false
-      }
-    },
-    {
-      "id": "dpf:content_links",
-      "group": "planning_core",
-      "label": {
-        "de": "Verknüpfte Inhalte",
-        "en": "Linked Content"
-      },
-      "description": {
-        "de": "URLs oder Referenzen zu Inhalten, die mit diesem Planungsinstrument verknüpft sind (instanzierte Ablaufmuster).",
-        "en": "URLs or references to content linked with this planning tool (instantiated process patterns)."
-      },
-      "prompt": {
-        "de": "URLs oder Titel von verknüpften Lerninhalten, Materialien oder Ressourcen.",
-        "en": "URLs or titles of linked learning content, materials, or resources."
-      },
-      "system": {
-        "path": "dpf:content_links",
-        "uri": "dpf:content_links",
-        "datatype": "array",
-        "multiple": true,
-        "required": false,
-        "ask_user": true,
-        "ai_fillable": true,
-        "index": {
-          "keyword": true
-        },
-        "normalization": {
-          "trim": true,
-          "deduplicate": true
-        },
-        "repo_field": false
-      }
-    },
-    {
       "id": "dpf:modality",
       "group": "context",
       "label": {
@@ -1836,12 +1438,12 @@
         "en": "Learning Modality"
       },
       "description": {
-        "de": "In welcher Lern-Modalität findet die Aktivität statt.",
-        "en": "In which learning modality the activity takes place."
+        "de": "PRES, ONL-SYNC, ONL-ASY, HYB, HFX",
+        "en": "PRES, ONL-SYNC, ONL-ASY, HYB, HFX"
       },
       "prompt": {
-        "de": "Lern-Modalität. Verwende EXAKT die Labels, z.B. 'PRES – Präsenz', 'ONL-SYNC – Online synchron', 'ONL-ASY – Online asynchron'.",
-        "en": "Learning Modality. Use EXACT labels, e.g. 'PRES – On-site', 'ONL-SYNC – Online Synchronous', 'ONL-ASY – Online Asynchronous'."
+        "de": "",
+        "en": ""
       },
       "system": {
         "path": "dpf:modality",
@@ -1855,46 +1457,38 @@
           "type": "closed",
           "concepts": [
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptModality/PRES",
               "label": {
-                "de": "PRES – Präsenz",
-                "en": "PRES – On-site"
+                "de": "PRES",
+                "en": "PRES"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptModality/ONL-SYNC",
               "label": {
-                "de": "ONL-SYNC – Online synchron",
-                "en": "ONL-SYNC – Online Synchronous"
+                "de": "ONL-SYNC",
+                "en": "ONL-SYNC"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptModality/ONL-ASY",
               "label": {
-                "de": "ONL-ASY – Online asynchron",
-                "en": "ONL-ASY – Online Asynchronous"
+                "de": "ONL-ASY",
+                "en": "ONL-ASY"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptModality/HYB",
               "label": {
-                "de": "HYB – Hybrid",
-                "en": "HYB – Hybrid"
+                "de": "HYB",
+                "en": "HYB"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptModality/HFX",
               "label": {
-                "de": "HFX – HyFlex",
-                "en": "HFX – HyFlex"
+                "de": "HFX",
+                "en": "HFX"
               }
             }
           ]
         },
-        "repo_field": false,
-        "index": {
-          "keyword": true
-        }
+        "repo_field": false
       }
     },
     {
@@ -1905,12 +1499,12 @@
         "en": "Social Form"
       },
       "description": {
-        "de": "Sozialform, in der die Lernenden arbeiten.",
-        "en": "Social form in which learners work."
+        "de": "EINZEL, PARTNER, GRP-KLEIN, GRP-GROSS, PLENUM, PROJEKT, FRONTAL",
+        "en": "SINGLE, PARTNER, GRP-SMALL, GRP-LARGE, PLENARY, PROJECT, FRONTAL"
       },
       "prompt": {
-        "de": "Sozialform. Verwende EXAKT die Labels, z.B. 'EINZEL – Einzelarbeit', 'PARTNER – Partnerarbeit', 'GRP-KLEIN – Kleingruppenarbeit'.",
-        "en": "Social Form. Use EXACT labels, e.g. 'EINZEL – Individual Work', 'PARTNER – Partner Work', 'GRP-KLEIN – Small Group Work'."
+        "de": "",
+        "en": ""
       },
       "system": {
         "path": "dpf:social_form",
@@ -1924,60 +1518,50 @@
           "type": "closed",
           "concepts": [
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptSocialForm/EINZEL",
               "label": {
-                "de": "EINZEL – Einzelarbeit",
-                "en": "EINZEL – Individual Work"
+                "de": "EINZEL",
+                "en": "SINGLE"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptSocialForm/PARTNER",
               "label": {
-                "de": "PARTNER – Partnerarbeit",
-                "en": "PARTNER – Partner Work"
+                "de": "PARTNER",
+                "en": "PARTNER"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptSocialForm/GRP-KLEIN",
               "label": {
-                "de": "GRP-KLEIN – Kleingruppenarbeit",
-                "en": "GRP-KLEIN – Small Group Work"
+                "de": "GRP-KLEIN",
+                "en": "GRP-SMALL"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptSocialForm/GRP-GROSS",
               "label": {
-                "de": "GRP-GROSS – Großgruppenarbeit",
-                "en": "GRP-GROSS – Large Group Work"
+                "de": "GRP-GROSS",
+                "en": "GRP-LARGE"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptSocialForm/PLENUM",
               "label": {
-                "de": "PLENUM – Plenum",
-                "en": "PLENUM – Plenary"
+                "de": "PLENUM",
+                "en": "PLENARY"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptSocialForm/PROJEKT",
               "label": {
-                "de": "PROJEKT – Projektarbeit",
-                "en": "PROJEKT – Project Work"
+                "de": "PROJEKT",
+                "en": "PROJECT"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptSocialForm/FRONTAL",
               "label": {
-                "de": "FRONTAL – Frontalunterricht",
-                "en": "FRONTAL – Direct Instruction"
+                "de": "FRONTAL",
+                "en": "FRONTAL"
               }
             }
           ]
         },
-        "repo_field": false,
-        "index": {
-          "keyword": true
-        }
+        "repo_field": false
       }
     },
     {
@@ -1988,12 +1572,12 @@
         "en": "Support/Control Mode"
       },
       "description": {
-        "de": "Grad der Lehrkraft-Steuerung vs. Selbststeuerung.",
-        "en": "Degree of teacher direction vs. self-direction."
+        "de": "SELF_FULL, TEACHER_DIRECTED, CO_CONSTRUCTIVE …",
+        "en": "SELF_FULL, TEACHER_DIRECTED, CO_CONSTRUCTIVE …"
       },
       "prompt": {
-        "de": "Unterstützungs-/Steuerungsmodus. Verwende EXAKT die Labels, z.B. 'SELF_FULL – Vollständig selbstgesteuert', 'SELF_WITH_OPTIONAL_TEACHER_INPUT – Selbstgesteuert mit opt. Lehrkraft-Input', 'WITH_STUDENT_INPUT – Mit Schüler-Input'.",
-        "en": "Support/Control Mode. Use EXACT labels, e.g. 'SELF_FULL – Fully Self-directed', 'SELF_WITH_OPTIONAL_TEACHER_INPUT – Self-directed with Optional Teacher Input', 'WITH_STUDENT_INPUT – With Student Input'."
+        "de": "",
+        "en": ""
       },
       "system": {
         "path": "dpf:support_mode",
@@ -2007,60 +1591,50 @@
           "type": "closed",
           "concepts": [
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptSupportMode/SELF_FULL",
               "label": {
-                "de": "SELF_FULL – Vollständig selbstgesteuert",
-                "en": "SELF_FULL – Fully Self-directed"
+                "de": "SELF_FULL",
+                "en": "SELF_FULL"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptSupportMode/SELF_WITH_OPTIONAL_TEACHER_INPUT",
               "label": {
-                "de": "SELF_WITH_OPTIONAL_TEACHER_INPUT – Selbstgesteuert mit opt. Lehrkraft-Input",
-                "en": "SELF_WITH_OPTIONAL_TEACHER_INPUT – Self-directed with Optional Teacher Input"
+                "de": "SELF_WITH_OPTIONAL_TEACHER_INPUT",
+                "en": "SELF_WITH_OPTIONAL_TEACHER_INPUT"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptSupportMode/WITH_STUDENT_INPUT",
               "label": {
-                "de": "WITH_STUDENT_INPUT – Mit Schüler-Input",
-                "en": "WITH_STUDENT_INPUT – With Student Input"
+                "de": "WITH_STUDENT_INPUT",
+                "en": "WITH_STUDENT_INPUT"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptSupportMode/PARALLELIZED",
               "label": {
-                "de": "PARALLELIZED – Parallelisiert",
-                "en": "PARALLELIZED – Parallelized"
+                "de": "PARALLELIZED",
+                "en": "PARALLELIZED"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptSupportMode/TEACHER_DIRECTED",
               "label": {
-                "de": "TEACHER_DIRECTED – Lehrkraft-gesteuert",
-                "en": "TEACHER_DIRECTED – Teacher-directed"
+                "de": "TEACHER_DIRECTED",
+                "en": "TEACHER_DIRECTED"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptSupportMode/GUIDED_SELF",
               "label": {
-                "de": "GUIDED_SELF – Geführt-selbstgesteuert",
-                "en": "GUIDED_SELF – Guided Self-directed"
+                "de": "GUIDED_SELF",
+                "en": "GUIDED_SELF"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptSupportMode/CO_CONSTRUCTIVE",
               "label": {
-                "de": "CO_CONSTRUCTIVE – Ko-konstruktiv",
-                "en": "CO_CONSTRUCTIVE – Co-constructive"
+                "de": "CO_CONSTRUCTIVE",
+                "en": "CO_CONSTRUCTIVE"
               }
             }
           ]
         },
-        "repo_field": false,
-        "index": {
-          "keyword": true
-        }
+        "repo_field": false
       }
     },
     {
@@ -2071,12 +1645,12 @@
         "en": "Learning location – Category (L1)"
       },
       "description": {
-        "de": "Kategorie des Lernorts.",
-        "en": "Category of the learning location."
+        "de": "CAMP, EXT, WBL, FIELD, HOME, COMM",
+        "en": "CAMP, EXT, WBL, FIELD, HOME, COMM"
       },
       "prompt": {
-        "de": "Lernort – Kategorie (L1). Verwende EXAKT die Labels, z.B. 'CAMP – Campus/Schule', 'EXT – Außerschulisch', 'WBL – Arbeitsplatz'.",
-        "en": "Learning location – Category (L1). Use EXACT labels, e.g. 'CAMP – Campus/School', 'EXT – External', 'WBL – Workplace'."
+        "de": "",
+        "en": ""
       },
       "system": {
         "path": "dpf:location_category",
@@ -2090,53 +1664,44 @@
           "type": "closed",
           "concepts": [
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptLocation/CAMP",
               "label": {
-                "de": "CAMP – Campus/Schule",
-                "en": "CAMP – Campus/School"
+                "de": "CAMP",
+                "en": "CAMP"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptLocation/EXT",
               "label": {
-                "de": "EXT – Außerschulisch",
-                "en": "EXT – External"
+                "de": "EXT",
+                "en": "EXT"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptLocation/WBL",
               "label": {
-                "de": "WBL – Arbeitsplatz",
-                "en": "WBL – Workplace"
+                "de": "WBL",
+                "en": "WBL"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptLocation/FIELD",
               "label": {
-                "de": "FIELD – Feld/Natur",
-                "en": "FIELD – Field/Nature"
+                "de": "FIELD",
+                "en": "FIELD"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptLocation/HOME",
               "label": {
-                "de": "HOME – Zuhause",
-                "en": "HOME – Home"
+                "de": "HOME",
+                "en": "HOME"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptLocation/COMM",
               "label": {
-                "de": "COMM – Gemeinschaft",
-                "en": "COMM – Community"
+                "de": "COMM",
+                "en": "COMM"
               }
             }
           ]
         },
-        "repo_field": false,
-        "index": {
-          "keyword": true
-        }
+        "repo_field": false
       }
     },
     {
@@ -2151,8 +1716,8 @@
         "en": "Free text code like CLASS, LAB-SCI, MUSE, URB …"
       },
       "prompt": {
-        "de": "Lernort-Untertyp als Code, z.B. 'CLASS', 'LAB-SCI', 'MUSE', 'URB', 'LIB'.",
-        "en": "Learning location subtype as code, e.g. 'CLASS', 'LAB-SCI', 'MUSE', 'URB', 'LIB'."
+        "de": "",
+        "en": ""
       },
       "system": {
         "path": "dpf:location_subcategory",
@@ -2180,12 +1745,12 @@
         "en": "Axes"
       },
       "description": {
-        "de": "Auf welchen Achsen wird differenziert.",
-        "en": "Along which axes differentiation occurs."
+        "de": "CONT, PROC, PROD, PACE, ENV, AFFC",
+        "en": "CONT, PROC, PROD, PACE, ENV, AFFC"
       },
       "prompt": {
-        "de": "Achsen. Verwende EXAKT die Labels, z.B. 'CONT – Inhalt', 'PROC – Prozess', 'PROD – Produkt'.",
-        "en": "Axes. Use EXACT labels, e.g. 'CONT – Content', 'PROC – Process', 'PROD – Product'."
+        "de": "",
+        "en": ""
       },
       "system": {
         "path": "dpf:differentiation_axes",
@@ -2199,45 +1764,39 @@
           "type": "closed",
           "concepts": [
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptDiffAxis/CONT",
               "label": {
-                "de": "CONT – Inhalt",
-                "en": "CONT – Content"
+                "de": "CONT",
+                "en": "CONT"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptDiffAxis/PROC",
               "label": {
-                "de": "PROC – Prozess",
-                "en": "PROC – Process"
+                "de": "PROC",
+                "en": "PROC"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptDiffAxis/PROD",
               "label": {
-                "de": "PROD – Produkt",
-                "en": "PROD – Product"
+                "de": "PROD",
+                "en": "PROD"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptDiffAxis/PACE",
               "label": {
-                "de": "PACE – Tempo",
-                "en": "PACE – Pace"
+                "de": "PACE",
+                "en": "PACE"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptDiffAxis/ENV",
               "label": {
-                "de": "ENV – Lernumgebung",
-                "en": "ENV – Environment"
+                "de": "ENV",
+                "en": "ENV"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptDiffAxis/AFFC",
               "label": {
-                "de": "AFFC – Affekt/Motivation",
-                "en": "AFFC – Affect/Motivation"
+                "de": "AFFC",
+                "en": "AFFC"
               }
             }
           ]
@@ -2245,10 +1804,7 @@
         "normalization": {
           "deduplicate": true
         },
-        "repo_field": false,
-        "index": {
-          "keyword": true
-        }
+        "repo_field": false
       }
     },
     {
@@ -2259,12 +1815,12 @@
         "en": "CONT — Levers"
       },
       "description": {
-        "de": "Hebel zur inhaltlichen Differenzierung.",
-        "en": "Levers for content differentiation."
+        "de": "CONT:LVL, CONT:CPLX, CONT:SCOPE, CONT:REP, CONT:LANGD, CONT:BRID",
+        "en": "CONT:LVL, CONT:CPLX, CONT:SCOPE, CONT:REP, CONT:LANGD, CONT:BRID"
       },
       "prompt": {
-        "de": "CONT — Hebel. Verwende EXAKT die Labels, z.B. 'CONT:LVL – Niveaustufe', 'CONT:CPLX – Komplexität', 'CONT:SCOPE – Umfang'.",
-        "en": "CONT — Levers. Use EXACT labels, e.g. 'CONT:LVL – Level', 'CONT:CPLX – Complexity', 'CONT:SCOPE – Scope'."
+        "de": "",
+        "en": ""
       },
       "system": {
         "path": "dpf:content_adjustment",
@@ -2278,53 +1834,44 @@
           "type": "closed",
           "concepts": [
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptContAdj/CONT:LVL",
               "label": {
-                "de": "CONT:LVL – Niveaustufe",
-                "en": "CONT:LVL – Level"
+                "de": "CONT:LVL",
+                "en": "CONT:LVL"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptContAdj/CONT:CPLX",
               "label": {
-                "de": "CONT:CPLX – Komplexität",
-                "en": "CONT:CPLX – Complexity"
+                "de": "CONT:CPLX",
+                "en": "CONT:CPLX"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptContAdj/CONT:SCOPE",
               "label": {
-                "de": "CONT:SCOPE – Umfang",
-                "en": "CONT:SCOPE – Scope"
+                "de": "CONT:SCOPE",
+                "en": "CONT:SCOPE"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptContAdj/CONT:REP",
               "label": {
-                "de": "CONT:REP – Repräsentation",
-                "en": "CONT:REP – Representation"
+                "de": "CONT:REP",
+                "en": "CONT:REP"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptContAdj/CONT:LANGD",
               "label": {
-                "de": "CONT:LANGD – Sprachliche Differenzierung",
-                "en": "CONT:LANGD – Language Differentiation"
+                "de": "CONT:LANGD",
+                "en": "CONT:LANGD"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptContAdj/CONT:BRID",
               "label": {
-                "de": "CONT:BRID – Brückenangebote",
-                "en": "CONT:BRID – Bridging Offers"
+                "de": "CONT:BRID",
+                "en": "CONT:BRID"
               }
             }
           ]
         },
-        "repo_field": false,
-        "index": {
-          "keyword": true
-        }
+        "repo_field": false
       }
     },
     {
@@ -2335,12 +1882,12 @@
         "en": "PROC — Support"
       },
       "description": {
-        "de": "Unterstützungsmaßnahmen für den Lernprozess.",
-        "en": "Support measures for the learning process."
+        "de": "PROC:HINT, PROC:WEX, PROC:GN, PROC:AO, PROC:MODL, PROC:SST, PROC:CKL, PROC:PTU, PROC:CONF, PROC:GFB",
+        "en": "PROC:HINT, PROC:WEX, PROC:GN, PROC:AO, PROC:MODL, PROC:SST, PROC:CKL, PROC:PTU, PROC:CONF, PROC:GFB"
       },
       "prompt": {
-        "de": "PROC — Support. Verwende EXAKT die Labels, z.B. 'PROC:HINT – Hinweise/Tipps', 'PROC:WEX – Worked Examples', 'PROC:GN – Gestufte Hilfen'.",
-        "en": "PROC — Support. Use EXACT labels, e.g. 'PROC:HINT – Hints/Tips', 'PROC:WEX – Worked Examples', 'PROC:GN – Graduated Help'."
+        "de": "",
+        "en": ""
       },
       "system": {
         "path": "dpf:process_support",
@@ -2354,81 +1901,68 @@
           "type": "closed",
           "concepts": [
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptProcSupp/PROC:HINT",
               "label": {
-                "de": "PROC:HINT – Hinweise/Tipps",
-                "en": "PROC:HINT – Hints/Tips"
+                "de": "PROC:HINT",
+                "en": "PROC:HINT"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptProcSupp/PROC:WEX",
               "label": {
-                "de": "PROC:WEX – Worked Examples",
-                "en": "PROC:WEX – Worked Examples"
+                "de": "PROC:WEX",
+                "en": "PROC:WEX"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptProcSupp/PROC:GN",
               "label": {
-                "de": "PROC:GN – Gestufte Hilfen",
-                "en": "PROC:GN – Graduated Help"
+                "de": "PROC:GN",
+                "en": "PROC:GN"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptProcSupp/PROC:AO",
               "label": {
-                "de": "PROC:AO – Advance Organizer",
-                "en": "PROC:AO – Advance Organizer"
+                "de": "PROC:AO",
+                "en": "PROC:AO"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptProcSupp/PROC:MODL",
               "label": {
-                "de": "PROC:MODL – Modellierung",
-                "en": "PROC:MODL – Modeling"
+                "de": "PROC:MODL",
+                "en": "PROC:MODL"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptProcSupp/PROC:SST",
               "label": {
-                "de": "PROC:SST – Satzstarter",
-                "en": "PROC:SST – Sentence Starters"
+                "de": "PROC:SST",
+                "en": "PROC:SST"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptProcSupp/PROC:CKL",
               "label": {
-                "de": "PROC:CKL – Checklisten",
-                "en": "PROC:CKL – Checklists"
+                "de": "PROC:CKL",
+                "en": "PROC:CKL"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptProcSupp/PROC:PTU",
               "label": {
-                "de": "PROC:PTU – Peer-Tutoring",
-                "en": "PROC:PTU – Peer Tutoring"
+                "de": "PROC:PTU",
+                "en": "PROC:PTU"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptProcSupp/PROC:CONF",
               "label": {
-                "de": "PROC:CONF – Lernkonferenzen",
-                "en": "PROC:CONF – Learning Conferences"
+                "de": "PROC:CONF",
+                "en": "PROC:CONF"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptProcSupp/PROC:GFB",
               "label": {
-                "de": "PROC:GFB – Gezieltes Feedback",
-                "en": "PROC:GFB – Targeted Feedback"
+                "de": "PROC:GFB",
+                "en": "PROC:GFB"
               }
             }
           ]
         },
-        "repo_field": false,
-        "index": {
-          "keyword": true
-        }
+        "repo_field": false
       }
     },
     {
@@ -2439,12 +1973,12 @@
         "en": "PROD — Flex"
       },
       "description": {
-        "de": "Flexibilität bei der Produktgestaltung.",
-        "en": "Flexibility in product design."
+        "de": "PROD:MMODA, PROD:SINGLE, PROD:AUDC, PROD:REV, PROD:TEAM",
+        "en": "PROD:MMODA, PROD:SINGLE, PROD:AUDC, PROD:REV, PROD:TEAM"
       },
       "prompt": {
-        "de": "PROD — Flex. Verwende EXAKT die Labels, z.B. 'PROD:MMODA – Multimodal', 'PROD:SINGLE – Einzelprodukt', 'PROD:AUDC – Zielgruppen-Anpassung'.",
-        "en": "PROD — Flex. Use EXACT labels, e.g. 'PROD:MMODA – Multimodal', 'PROD:SINGLE – Single Product', 'PROD:AUDC – Audience Adaptation'."
+        "de": "",
+        "en": ""
       },
       "system": {
         "path": "dpf:product_flex",
@@ -2458,46 +1992,38 @@
           "type": "closed",
           "concepts": [
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptProdFlex/PROD:MMODA",
               "label": {
-                "de": "PROD:MMODA – Multimodal",
-                "en": "PROD:MMODA – Multimodal"
+                "de": "PROD:MMODA",
+                "en": "PROD:MMODA"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptProdFlex/PROD:SINGLE",
               "label": {
-                "de": "PROD:SINGLE – Einzelprodukt",
-                "en": "PROD:SINGLE – Single Product"
+                "de": "PROD:SINGLE",
+                "en": "PROD:SINGLE"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptProdFlex/PROD:AUDC",
               "label": {
-                "de": "PROD:AUDC – Zielgruppen-Anpassung",
-                "en": "PROD:AUDC – Audience Adaptation"
+                "de": "PROD:AUDC",
+                "en": "PROD:AUDC"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptProdFlex/PROD:REV",
               "label": {
-                "de": "PROD:REV – Revision/Überarbeitung",
-                "en": "PROD:REV – Revision"
+                "de": "PROD:REV",
+                "en": "PROD:REV"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptProdFlex/PROD:TEAM",
               "label": {
-                "de": "PROD:TEAM – Teamprodukt",
-                "en": "PROD:TEAM – Team Product"
+                "de": "PROD:TEAM",
+                "en": "PROD:TEAM"
               }
             }
           ]
         },
-        "repo_field": false,
-        "index": {
-          "keyword": true
-        }
+        "repo_field": false
       }
     },
     {
@@ -2508,12 +2034,12 @@
         "en": "PACE — Policy"
       },
       "description": {
-        "de": "Regelungen zum Lerntempo.",
-        "en": "Policies regarding learning pace."
+        "de": "PACE:FLEXD, PACE:SPAC, PACE:GATE, PACE:EXTRA, PACE:FAST",
+        "en": "PACE:FLEXD, PACE:SPAC, PACE:GATE, PACE:EXTRA, PACE:FAST"
       },
       "prompt": {
-        "de": "PACE — Policy. Verwende EXAKT die Labels, z.B. 'PACE:FLEXD – Flexible Fristen', 'PACE:SPAC – Spaced Practice', 'PACE:GATE – Checkpoint/Gatekeeper'.",
-        "en": "PACE — Policy. Use EXACT labels, e.g. 'PACE:FLEXD – Flexible Deadlines', 'PACE:SPAC – Spaced Practice', 'PACE:GATE – Checkpoint/Gatekeeper'."
+        "de": "",
+        "en": ""
       },
       "system": {
         "path": "dpf:pace_policy",
@@ -2527,46 +2053,38 @@
           "type": "closed",
           "concepts": [
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptPacePolicy/PACE:FLEXD",
               "label": {
-                "de": "PACE:FLEXD – Flexible Fristen",
-                "en": "PACE:FLEXD – Flexible Deadlines"
+                "de": "PACE:FLEXD",
+                "en": "PACE:FLEXD"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptPacePolicy/PACE:SPAC",
               "label": {
-                "de": "PACE:SPAC – Spaced Practice",
-                "en": "PACE:SPAC – Spaced Practice"
+                "de": "PACE:SPAC",
+                "en": "PACE:SPAC"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptPacePolicy/PACE:GATE",
               "label": {
-                "de": "PACE:GATE – Checkpoint/Gatekeeper",
-                "en": "PACE:GATE – Checkpoint/Gatekeeper"
+                "de": "PACE:GATE",
+                "en": "PACE:GATE"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptPacePolicy/PACE:EXTRA",
               "label": {
-                "de": "PACE:EXTRA – Zusatzzeit",
-                "en": "PACE:EXTRA – Extra Time"
+                "de": "PACE:EXTRA",
+                "en": "PACE:EXTRA"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptPacePolicy/PACE:FAST",
               "label": {
-                "de": "PACE:FAST – Beschleunigung",
-                "en": "PACE:FAST – Acceleration"
+                "de": "PACE:FAST",
+                "en": "PACE:FAST"
               }
             }
           ]
         },
-        "repo_field": false,
-        "index": {
-          "keyword": true
-        }
+        "repo_field": false
       }
     },
     {
@@ -2577,12 +2095,12 @@
         "en": "Strategies (concrete description, optional)"
       },
       "description": {
-        "de": "Konkrete Differenzierungsstrategien.",
-        "en": "Concrete differentiation strategies."
+        "de": "ADRL, AITUT, CHOI, COMP, ENRI, EXEM, FDBK, FLEX, FLXA, HINT, INTR, JIGS, LANG, MENU, MMOD, MMOP, MPTH, OPEN, PACE, PEER, PLAY, QLEV, RAFT, REME, SEAT, SOCR, STAG, STAT, TIER, TPS",
+        "en": "ADRL, AITUT, CHOI, COMP, ENRI, EXEM, FDBK, FLEX, FLXA, HINT, INTR, JIGS, LANG, MENU, MMOD, MMOP, MPTH, OPEN, PACE, PEER, PLAY, QLEV, RAFT, REME, SEAT, SOCR, STAG, STAT, TIER, TPS"
       },
       "prompt": {
-        "de": "Strategien (konkrete Beschreibung, optional). Verwende EXAKT die Labels, z.B. 'ADRL – Adaptive Lesbarkeit', 'AITUT – KI-Tutoring', 'CHOI – Wahlmöglichkeiten'.",
-        "en": "Strategies (concrete description, optional). Use EXACT labels, e.g. 'ADRL – Adaptive Readability', 'AITUT – AI Tutoring', 'CHOI – Choices'."
+        "de": "",
+        "en": ""
       },
       "system": {
         "path": "dpf:diff_strategies",
@@ -2596,213 +2114,183 @@
           "type": "closed",
           "concepts": [
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptDiffStrat/ADRL",
               "label": {
-                "de": "ADRL – Adaptive Lesbarkeit",
-                "en": "ADRL – Adaptive Readability"
+                "de": "ADRL",
+                "en": "ADRL"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptDiffStrat/AITUT",
               "label": {
-                "de": "AITUT – KI-Tutoring",
-                "en": "AITUT – AI Tutoring"
+                "de": "AITUT",
+                "en": "AITUT"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptDiffStrat/CHOI",
               "label": {
-                "de": "CHOI – Wahlmöglichkeiten",
-                "en": "CHOI – Choices"
+                "de": "CHOI",
+                "en": "CHOI"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptDiffStrat/COMP",
               "label": {
-                "de": "COMP – Kompaktierung",
-                "en": "COMP – Compacting"
+                "de": "COMP",
+                "en": "COMP"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptDiffStrat/ENRI",
               "label": {
-                "de": "ENRI – Enrichment",
-                "en": "ENRI – Enrichment"
+                "de": "ENRI",
+                "en": "ENRI"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptDiffStrat/EXEM",
               "label": {
-                "de": "EXEM – Befreiung",
-                "en": "EXEM – Exemption"
+                "de": "EXEM",
+                "en": "EXEM"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptDiffStrat/FDBK",
               "label": {
-                "de": "FDBK – Feedback",
-                "en": "FDBK – Feedback"
+                "de": "FDBK",
+                "en": "FDBK"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptDiffStrat/FLEX",
               "label": {
-                "de": "FLEX – Flexible Gruppen",
-                "en": "FLEX – Flexible Grouping"
+                "de": "FLEX",
+                "en": "FLEX"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptDiffStrat/FLXA",
               "label": {
-                "de": "FLXA – Flexibles Assessment",
-                "en": "FLXA – Flexible Assessment"
+                "de": "FLXA",
+                "en": "FLXA"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptDiffStrat/HINT",
               "label": {
-                "de": "HINT – Hinweise",
-                "en": "HINT – Hints"
+                "de": "HINT",
+                "en": "HINT"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptDiffStrat/INTR",
               "label": {
-                "de": "INTR – Interessenbasiert",
-                "en": "INTR – Interest-based"
+                "de": "INTR",
+                "en": "INTR"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptDiffStrat/JIGS",
               "label": {
-                "de": "JIGS – Jigsaw",
-                "en": "JIGS – Jigsaw"
+                "de": "JIGS",
+                "en": "JIGS"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptDiffStrat/LANG",
               "label": {
-                "de": "LANG – Sprachsensibel",
-                "en": "LANG – Language-sensitive"
+                "de": "LANG",
+                "en": "LANG"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptDiffStrat/MENU",
               "label": {
-                "de": "MENU – Lernmenü",
-                "en": "MENU – Learning Menu"
+                "de": "MENU",
+                "en": "MENU"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptDiffStrat/MMOD",
               "label": {
-                "de": "MMOD – Multimodal",
-                "en": "MMOD – Multimodal"
+                "de": "MMOD",
+                "en": "MMOD"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptDiffStrat/MMOP",
               "label": {
-                "de": "MMOP – Multi-Methoden",
-                "en": "MMOP – Multi-methods"
+                "de": "MMOP",
+                "en": "MMOP"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptDiffStrat/MPTH",
               "label": {
-                "de": "MPTH – Mehrere Lernpfade",
-                "en": "MPTH – Multiple Paths"
+                "de": "MPTH",
+                "en": "MPTH"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptDiffStrat/OPEN",
               "label": {
-                "de": "OPEN – Offene Aufgaben",
-                "en": "OPEN – Open Tasks"
+                "de": "OPEN",
+                "en": "OPEN"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptDiffStrat/PACE",
               "label": {
-                "de": "PACE – Tempo-Differenzierung",
-                "en": "PACE – Pace Differentiation"
+                "de": "PACE",
+                "en": "PACE"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptDiffStrat/PEER",
               "label": {
-                "de": "PEER – Peer-Unterstützung",
-                "en": "PEER – Peer Support"
+                "de": "PEER",
+                "en": "PEER"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptDiffStrat/PLAY",
               "label": {
-                "de": "PLAY – Spielerisch",
-                "en": "PLAY – Playful"
+                "de": "PLAY",
+                "en": "PLAY"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptDiffStrat/QLEV",
               "label": {
-                "de": "QLEV – Fragen-Niveaus",
-                "en": "QLEV – Question Levels"
+                "de": "QLEV",
+                "en": "QLEV"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptDiffStrat/RAFT",
               "label": {
-                "de": "RAFT – RAFT-Strategie",
-                "en": "RAFT – RAFT Strategy"
+                "de": "RAFT",
+                "en": "RAFT"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptDiffStrat/REME",
               "label": {
-                "de": "REME – Remediation",
-                "en": "REME – Remediation"
+                "de": "REME",
+                "en": "REME"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptDiffStrat/SEAT",
               "label": {
-                "de": "SEAT – Sitzordnung",
-                "en": "SEAT – Seating Arrangement"
+                "de": "SEAT",
+                "en": "SEAT"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptDiffStrat/SOCR",
               "label": {
-                "de": "SOCR – Sokratisch",
-                "en": "SOCR – Socratic"
+                "de": "SOCR",
+                "en": "SOCR"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptDiffStrat/STAG",
               "label": {
-                "de": "STAG – Gestuft",
-                "en": "STAG – Staged"
+                "de": "STAG",
+                "en": "STAG"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptDiffStrat/STAT",
               "label": {
-                "de": "STAT – Stationenlernen",
-                "en": "STAT – Station Learning"
+                "de": "STAT",
+                "en": "STAT"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptDiffStrat/TIER",
               "label": {
-                "de": "TIER – Tiered Tasks",
-                "en": "TIER – Tiered Tasks"
+                "de": "TIER",
+                "en": "TIER"
               }
             },
             {
-              "uri": "http://w3id.org/openeduhub/vocabs/dptDiffStrat/TPS",
               "label": {
-                "de": "TPS – Think-Pair-Share",
-                "en": "TPS – Think-Pair-Share"
+                "de": "TPS",
+                "en": "TPS"
               }
             }
           ]
@@ -2810,10 +2298,7 @@
         "normalization": {
           "deduplicate": true
         },
-        "repo_field": false,
-        "index": {
-          "keyword": true
-        }
+        "repo_field": false
       }
     }
   ],
@@ -2831,12 +2316,6 @@
     "dpf:assessment_norm": [],
     "dpf:assessment_method": [],
     "dpf:difficulty": null,
-    "dpf:duration": null,
-    "dpf:group_size": "",
-    "dpf:materials": [],
-    "dpf:prior_knowledge": "",
-    "dpf:teacher_role": "",
-    "dpf:content_links": [],
     "dpf:modality": "",
     "dpf:social_form": "",
     "dpf:support_mode": "",
