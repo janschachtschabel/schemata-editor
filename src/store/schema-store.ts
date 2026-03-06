@@ -1027,3 +1027,10 @@ export const useAvailableSchemas = () => {
   if (!manifest) return [];
   return manifest.versions[activeVersion]?.schemas || [];
 };
+
+export const useDeactivatedSchemas = () => {
+  const { activeContext, activeVersion, contextManifests } = useSchemaStore();
+  const manifest = contextManifests.get(activeContext);
+  if (!manifest) return [];
+  return manifest.versions[activeVersion]?.deactivated || [];
+};

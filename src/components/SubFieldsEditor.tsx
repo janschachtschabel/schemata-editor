@@ -7,20 +7,18 @@ import {
   ChevronRight,
   Box,
   Layers,
-  Settings2,
   Type,
   List,
   Link,
   Hash,
   Calendar,
+  Clock,
   ToggleLeft,
   AlertCircle,
   Sparkles,
   Globe,
-  Database,
-  Search,
-  HelpCircle,
   Copy,
+  Braces,
 } from 'lucide-react';
 import { cn } from '../utils/cn';
 
@@ -54,16 +52,20 @@ const setLocalizedValue = (
   return { ...base, [lang]: newValue };
 };
 
-const datatypeOptions = ['string', 'array', 'uri', 'number', 'date', 'boolean', 'object'];
+const datatypeOptions = ['string', 'array', 'uri', 'number', 'integer', 'date', 'datetime', 'time', 'boolean', 'object', 'json'];
 
 const datatypeIcons: Record<string, React.ReactNode> = {
   string: <Type className="h-3 w-3" />,
   array: <List className="h-3 w-3" />,
   uri: <Link className="h-3 w-3" />,
   number: <Hash className="h-3 w-3" />,
+  integer: <Hash className="h-3 w-3" />,
   date: <Calendar className="h-3 w-3" />,
+  datetime: <Calendar className="h-3 w-3" />,
+  time: <Clock className="h-3 w-3" />,
   boolean: <ToggleLeft className="h-3 w-3" />,
   object: <Box className="h-3 w-3" />,
+  json: <Braces className="h-3 w-3" />,
 };
 
 const getDatatypeBadge = (datatype: string) => {
@@ -72,9 +74,13 @@ const getDatatypeBadge = (datatype: string) => {
     array: 'bg-purple-100 text-purple-700',
     uri: 'bg-green-100 text-green-700',
     number: 'bg-amber-100 text-amber-700',
+    integer: 'bg-amber-100 text-amber-700',
     date: 'bg-pink-100 text-pink-700',
+    datetime: 'bg-pink-100 text-pink-700',
+    time: 'bg-pink-100 text-pink-700',
     boolean: 'bg-cyan-100 text-cyan-700',
     object: 'bg-orange-100 text-orange-700',
+    json: 'bg-orange-100 text-orange-700',
   };
   return colors[datatype] || 'bg-gray-100 text-gray-700';
 };
@@ -466,7 +472,7 @@ interface SubFieldDetailProps {
   onSystemUpdate: (updates: Partial<SystemConfig>) => void;
 }
 
-function SubFieldDetail({ field, vIdx, fIdx, onFieldUpdate, onSystemUpdate }: SubFieldDetailProps) {
+function SubFieldDetail({ field, vIdx: _vIdx, fIdx: _fIdx, onFieldUpdate, onSystemUpdate }: SubFieldDetailProps) {
   const [activeSection, setActiveSection] = useState<'basic' | 'system'>('basic');
 
   return (

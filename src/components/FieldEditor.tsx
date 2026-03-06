@@ -8,6 +8,7 @@ import {
   Link, 
   Hash, 
   Calendar, 
+  Clock,
   ToggleLeft,
   Box,
   BookOpen,
@@ -18,7 +19,8 @@ import {
   Search,
   FileText,
   Save,
-  HelpCircle
+  HelpCircle,
+  Braces
 } from 'lucide-react';
 import { cn } from '../utils/cn';
 import { VocabularyEditor } from './VocabularyEditor';
@@ -155,9 +157,13 @@ export function FieldEditor() {
     array: <List className="h-4 w-4" />,
     uri: <Link className="h-4 w-4" />,
     number: <Hash className="h-4 w-4" />,
+    integer: <Hash className="h-4 w-4" />,
     date: <Calendar className="h-4 w-4" />,
+    datetime: <Calendar className="h-4 w-4" />,
+    time: <Clock className="h-4 w-4" />,
     boolean: <ToggleLeft className="h-4 w-4" />,
     object: <Box className="h-4 w-4" />,
+    json: <Braces className="h-4 w-4" />,
   };
 
   return (
@@ -372,14 +378,98 @@ function BasicTab({ field, schema, onUpdate, getLocalizedValue, setLocalizedValu
 
       {/* Prompt */}
       <div className="space-y-3">
-        <LabelWithTooltip label="KI-Prompt Hinweis" tooltip={TOOLTIPS.promptDe} className="text-sm font-medium" />
-        <textarea
-          value={getLocalizedValue(field.prompt, 'de')}
-          onChange={(e) => onUpdate({ prompt: setLocalizedValue(field.prompt, 'de', e.target.value) as LocalizedString })}
-          rows={2}
-          className="w-full px-3 py-2 border rounded-md bg-background text-sm resize-none"
-          placeholder="Zusätzliche Anweisungen für KI-Extraktion"
-        />
+        <span className="text-sm font-medium">KI-Prompt Hinweis</span>
+        <div className="space-y-2">
+          <div>
+            <label className="text-xs text-muted-foreground mb-1 block">🇩🇪 Deutsch</label>
+            <textarea
+              value={getLocalizedValue(field.prompt, 'de')}
+              onChange={(e) => onUpdate({ prompt: setLocalizedValue(field.prompt, 'de', e.target.value) as LocalizedString })}
+              rows={2}
+              className="w-full px-3 py-2 border rounded-md bg-background text-sm resize-none"
+              placeholder="Anweisungen für KI-Extraktion (DE)"
+            />
+          </div>
+          <div>
+            <label className="text-xs text-muted-foreground mb-1 block">🇬🇧 English</label>
+            <textarea
+              value={getLocalizedValue(field.prompt, 'en')}
+              onChange={(e) => onUpdate({ prompt: setLocalizedValue(field.prompt, 'en', e.target.value) as LocalizedString })}
+              rows={2}
+              className="w-full px-3 py-2 border rounded-md bg-background text-sm resize-none"
+              placeholder="Instructions for AI extraction (EN)"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Examples */}
+      <div className="space-y-3">
+        <span className="text-sm font-medium">Beispiele</span>
+        <div className="grid grid-cols-2 gap-2">
+          <div>
+            <label className="text-xs text-muted-foreground mb-1 block">🇩🇪 Beispiele (je Zeile)</label>
+            <textarea
+              value={(field.examples?.de || []).map(v => Array.isArray(v) ? v.join(', ') : v).join('\n')}
+              onChange={(e) => {
+                const lines = e.target.value.split('\n').filter(l => l.trim());
+                onUpdate({ examples: { ...field.examples, de: lines } });
+              }}
+              rows={3}
+              className="w-full px-3 py-2 border rounded-md bg-background text-sm resize-none font-mono"
+              placeholder="Beispiel 1&#10;Beispiel 2"
+            />
+          </div>
+          <div>
+            <label className="text-xs text-muted-foreground mb-1 block">🇬🇧 Examples (per line)</label>
+            <textarea
+              value={(field.examples?.en || []).map(v => Array.isArray(v) ? v.join(', ') : v).join('\n')}
+              onChange={(e) => {
+                const lines = e.target.value.split('\n').filter(l => l.trim());
+                onUpdate({ examples: { ...field.examples, en: lines } });
+              }}
+              rows={3}
+              className="w-full px-3 py-2 border rounded-md bg-background text-sm resize-none font-mono"
+              placeholder="Example 1&#10;Example 2"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Prompt Instructions */}
+      <div className="space-y-3">
+        <span className="text-sm font-medium">Prompt-Anweisungen</span>
+        <div className="space-y-2">
+          <label className="flex items-center gap-2">
+            <input
+              type="checkbox"
+              checked={field.promptInstructions?.labelExactMatch || false}
+              onChange={(e) => onUpdate({ 
+                promptInstructions: { 
+                  ...field.promptInstructions, 
+                  labelExactMatch: e.target.checked || undefined 
+                } 
+              })}
+              className="rounded"
+            />
+            <span className="text-sm">Label Exact Match (exakte Vokabular-Labels verlangen)</span>
+          </label>
+          <div>
+            <label className="text-xs text-muted-foreground mb-1 block">Extraktionshinweise</label>
+            <textarea
+              value={field.promptInstructions?.extractionHints || ''}
+              onChange={(e) => onUpdate({ 
+                promptInstructions: { 
+                  ...field.promptInstructions, 
+                  extractionHints: e.target.value || undefined 
+                } 
+              })}
+              rows={2}
+              className="w-full px-3 py-2 border rounded-md bg-background text-sm resize-none"
+              placeholder="Zusätzliche Hinweise für die KI-Extraktion"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -396,7 +486,7 @@ interface SystemTabProps {
 }
 
 function SystemTab({ field, onSystemUpdate, datatypeIcons }: SystemTabProps) {
-  const datatypes = ['string', 'array', 'uri', 'number', 'date', 'boolean', 'object'];
+  const datatypes = ['string', 'array', 'uri', 'number', 'integer', 'date', 'datetime', 'time', 'boolean', 'object', 'json'];
 
   return (
     <div className="space-y-6">

@@ -130,8 +130,8 @@ export interface SystemConfig {
   path: string;
   /** URI (often same as path) */
   uri: string;
-  /** Data type: 'string', 'array', 'uri', 'number', 'date', 'boolean', 'object' */
-  datatype: 'string' | 'array' | 'uri' | 'number' | 'date' | 'boolean' | 'object';
+  /** Data type: 'string', 'array', 'uri', 'number', 'integer', 'date', 'datetime', 'time', 'boolean', 'object', 'json' */
+  datatype: 'string' | 'array' | 'uri' | 'number' | 'integer' | 'date' | 'datetime' | 'time' | 'boolean' | 'object' | 'json';
   /** Can have multiple values */
   multiple: boolean;
   /** Field is required */
@@ -238,6 +238,8 @@ export interface VersionEntry {
   isDefault?: boolean;
   /** List of schema files in this version */
   schemas: string[];
+  /** List of deactivated schema files (hidden from active use but preserved) */
+  deactivated?: string[];
   /** Changelog entries */
   changelog?: ChangelogEntry[];
 }

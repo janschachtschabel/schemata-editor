@@ -22,7 +22,7 @@ export function VocabularyEditor({ vocabulary, onUpdate }: VocabularyEditorProps
   const [expandedConcepts, setExpandedConcepts] = useState<Set<number>>(new Set());
   const [skohubUrl, setSkohubUrl] = useState('');
   const [isImporting, setIsImporting] = useState(false);
-  const [viewMode, setViewMode] = useState<'flat' | 'tree'>('flat');
+  const [viewMode, setViewMode] = useState<'flat' | 'tree'>('tree');
 
   // No vocabulary configured
   if (!vocabulary) {
@@ -206,14 +206,31 @@ export function VocabularyEditor({ vocabulary, onUpdate }: VocabularyEditorProps
             <div>
               <label className="text-xs text-muted-foreground flex items-center gap-1">
                 <GitBranch className="h-3 w-3" />
-                Broader (Übergeordnetes Konzept URI)
+                Broader (Übergeordnetes Konzept)
               </label>
+              {/* Dropdown for selecting parent from existing concepts */}
+              <select
+                value={concept.broader || ''}
+                onChange={(e) => updateConcept(index, { broader: e.target.value || undefined })}
+                className="w-full px-2 py-1 border rounded text-sm bg-background mb-1"
+              >
+                <option value="">— Kein übergeordnetes Konzept (Root) —</option>
+                {vocabulary.concepts
+                  .filter((c, i) => i !== index && c.uri)
+                  .map((c, ci) => (
+                    <option key={ci} value={c.uri}>
+                      {getLocalizedValue(c.label, 'de') || c.uri}
+                    </option>
+                  ))
+                }
+              </select>
+              {/* Manual URI input for external broader references */}
               <input
                 type="text"
                 value={concept.broader || ''}
                 onChange={(e) => updateConcept(index, { broader: e.target.value || undefined })}
                 className="w-full px-2 py-1 border rounded text-sm font-mono bg-background"
-                placeholder="http://... (URI des Eltern-Konzepts)"
+                placeholder="oder URI manuell eingeben..."
               />
               {concept.broader && (
                 <p className="text-xs text-muted-foreground mt-0.5">

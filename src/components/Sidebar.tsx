@@ -1,9 +1,10 @@
 import { useState, useRef } from 'react';
-import { useSchemaStore, useAvailableSchemas } from '../store/schema-store';
+import { useSchemaStore, useAvailableSchemas, useDeactivatedSchemas } from '../store/schema-store';
 import type { ContextEntry } from '../types/schema';
 import { 
   FolderOpen, 
   FileJson, 
+  FileX,
   Plus, 
   Trash2, 
   ChevronRight, 
@@ -77,6 +78,7 @@ export function Sidebar() {
   };
 
   const availableSchemas = useAvailableSchemas();
+  const deactivatedSchemas = useDeactivatedSchemas();
   const [expandedContexts, setExpandedContexts] = useState<Set<string>>(new Set(['default']));
   const [showCreateContext, setShowCreateContext] = useState(false);
   const [showCreateSchema, setShowCreateSchema] = useState(false);
@@ -239,6 +241,29 @@ export function Sidebar() {
                             <span className="truncate">{schemaFile}</span>
                           </div>
                         ))}
+                        {deactivatedSchemas.length > 0 && (
+                          <>
+                            <div className="px-2 pt-2 pb-1">
+                              <span className="text-xs text-muted-foreground font-medium">Deaktiviert</span>
+                            </div>
+                            {deactivatedSchemas.map(schemaFile => (
+                              <div
+                                key={schemaFile}
+                                className={cn(
+                                  "flex items-center gap-2 px-2 py-1 rounded cursor-pointer text-sm opacity-50",
+                                  activeSchemaFile === schemaFile
+                                    ? "bg-primary/10 text-primary opacity-75"
+                                    : "hover:bg-accent/50"
+                                )}
+                                onClick={() => setActiveSchema(schemaFile)}
+                                title="Deaktiviertes Schema — in dieser Version nicht aktiv"
+                              >
+                                <FileX className="h-3.5 w-3.5" />
+                                <span className="truncate">{schemaFile}</span>
+                              </div>
+                            ))}
+                          </>
+                        )}
                       </div>
                     </div>
                   )}
